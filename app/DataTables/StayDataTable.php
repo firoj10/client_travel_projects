@@ -48,7 +48,7 @@ class StayDataTable extends DataTable
                     ->setTableId('stay-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
-                    //->dom('Bfrtip')
+                   
                     ->orderBy(1)
                     ->selectStyleSingle()
                     ->buttons([

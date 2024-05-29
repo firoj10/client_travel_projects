@@ -10,7 +10,7 @@
                                 <div>
                                     <h4>Stay Form </h4>
                                 </div>
-                                <div> <a href="{{route('admin.stay.create')}}">Create Stay</a></div>
+                                <div> <a class="btn btn-primary" href="{{route('admin.stay.create')}}">Create Stay</a></div>
                             </div>
                         </div>
                         <div class="card-body">
