@@ -505,7 +505,57 @@ li {
     align-items: center;
     justify-content: center;
 }
+.resort-tabs .container-fluid {
+    background: rgba(83, 147, 209, 0.30);
+    box-shadow: 0px 4px 16px rgba(254, 205, 211, 0.1), 0px 8px 24px rgba(254, 205, 211, 0.1), 0px 16px 56px rgba(254, 205, 211, 0.1);
+}
+
+.content {
+    display: flex;
+    /* justify-content: space-between; */
+}
+.content input {
+    display: none;
+}
+.content .list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20%;
+    margin-right: 50px;
+}
+#overview:checked~.list label.overview, #accomodation:checked~.list label.accomodation, #Spa-Wellness:checked~.list label.Spa-Wellness, #activities-facilities:checked~.list label.activities-facilities {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.content .list label {
+    text-align: center;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    height: 60px;
+    line-height: 60px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #9A9AA7;
+    background: #EBE6DF;
+    transition: all 0.5s ease;
+    z-index: 10;
+}
+label {
+    display: inline-block;
+}.content .text-content {
+    width: 80%;
+    height: 100%;
+    color: var(--black-color);
+}
+.new-resort{
+    display: block !important;
+}
 @media (max-width:600px) {
+    .new-resort{
+        display: inline !important;
+    }
     .header-form .form-body .input input {
         width: 100%;
         margin-left: 2px;

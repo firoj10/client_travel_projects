@@ -5,6 +5,11 @@
             <div class="section-header">
                 <div class="col-12 col-md-10">
                     <div class="card">
+                        @if (session('success'))
+                        <div class="alert alert-success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
                         <div class="card-header">
                             <div class="d-flex  justify-between">
                                 <div>
@@ -13,6 +18,15 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                             <form action="{{route('admin.stay.update', $stay->id)}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
@@ -52,12 +66,22 @@
                                         <textarea class="form-control" name="short_description" rows="3">{{ $stay->short_description }}</textarea>
                                     </div>
                                     <div class="mb-3 col-md-6">
+                                       <div> <img width="50" src="{{asset($stay->thumbnail_image_link) }}" alt="thum"></div>
                                         <label for="thumbnail_image_link" class="form-label">Thumbnail Image</label>
                                         <input type="file" class="form-control" name="thumbnail_image_link">
                                     </div>
                                     <div class="mb-3 col-md-6">
-                                        <label for="gallary_images_link" class="form-label">Gallery Images</label>
-                                        <input type="file" class="form-control" name="gallary_images_link[]" multiple>
+                                        <div class="d-flex" >
+                                        @php
+                                        $gallerys = json_decode($stay->gallery_images_link); @endphp
+                                        @foreach ($gallerys as $gallery)
+                                            <div class="col-2">
+                                                <img width="50" src="{{ asset('gallery/' . $gallery) }}" />
+                                            </div>
+                                             @endforeach
+                                    </div>
+                                        <label for="gallery_images_link" class="form-label">Gallery Images</label>
+                                        <input type="file" class="form-control" name="gallery_images_link[]" multiple>
                                     </div>
                                     <div class="mb-3 col-md-6">
                                         <label for="overview_description" class="form-label">Overview Description</label>

@@ -36,6 +36,9 @@ require __DIR__.'/auth.php';
 
 Route::get('admin/login',[AdminController::class, 'login'])->name('admin.login');
 
+Route::get('/resortdetails/{id}', [HomeController::class, 'resortdetails'])->name('resortdetails');
+
+
 
 
 

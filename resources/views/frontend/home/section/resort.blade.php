@@ -8,14 +8,11 @@
             <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
         </div>
         <div class="row  my-4">
-
-            
            @foreach ($stays as $stay)
            <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3  ">
-            <a href="javascript:void(0)" class="anchor_click_function" data-pagename="resort-details">
+            <a href="{{route('resortdetails', $stay->id )}}" class="anchor_click_function" data-pagename="resort-details">
                 <div class="card-header overflow-hidden ">
-                    <img src="{{ asset('frontend/img/experience-1.jpg') }}" alt="resort"
-                        class="img-fluid">
+                    <img src="{{$stay->thumbnail_image_link}}" alt="resort" class="img-fluid">
                 </div>
                 <div class="card-body">
                     <div class="text-center">
@@ -31,19 +28,17 @@
                                 d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
                             </path>
                         </svg>
-                        <span>Dhigurah, Noonu Atoll</span>
+                        <span>{{$stay->address}}</span>
                     </div>
                     <div class="card-list  py-2">
                         <ul class="bullets_list_resort">
-                            <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> One Child Free<br>
+                           @php
+                           $descriptions =  json_decode($stay->short_description); @endphp 
+                               @foreach($descriptions as $description)
 
-                            </p>
-                            <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> 15% Discount All Room
-                                Categories&nbsp;<br>
-                            </p>
-                            <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> Seaplane or Speedboat
-                                Transfer<br>
-                            </p>
+                               <p class="mb-0"><i class="fa fa-check-square-o px-2"></i>{{$description}} </p>
+
+                               @endforeach
                         </ul>
                     </div>
                 </div>
@@ -51,8 +46,8 @@
         </div>
            @endforeach
             
-        </div>
-        {{-- <div class="row  my-4">
+       {{-- </div>
+         <div class="row  my-4">
             <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3  ">
                 <a href="javascript:void(0)" class="anchor_click_function" data-pagename="resort-details">
                     <div class="card-header overflow-hidden ">
