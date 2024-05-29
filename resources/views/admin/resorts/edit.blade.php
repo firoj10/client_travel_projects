@@ -61,14 +61,20 @@
                                         <input type="text" class="form-control" value="{{ $stay->country }}"
                                             name="country">
                                     </div>
-                                    <div class="mb-3 col-md-6">
-                                        <label for="short_description" class="form-label">Short Description</label>
-                                        <textarea class="form-control" name="short_description" rows="3">{{ $stay->short_description }}</textarea>
-                                    </div>
+
+                                    @php
+                                    $descriptions =  json_decode($stay->short_description); @endphp 
+                                       @foreach($descriptions as $index => $description)
+                                       <div class="mb-3 col-md-6">
+                                           <label for="short_description_{{ $index }}" class="form-label">Short Description</label>
+                                           <textarea class="form-control" name="short_description[]" rows="3">{{ $description }}</textarea>
+                                       </div>
+                                   @endforeach
+                                   
                                     <div class="mb-3 col-md-6">
                                        <div> <img width="50" src="{{asset($stay->thumbnail_image_link) }}" alt="thum"></div>
                                         <label for="thumbnail_image_link" class="form-label">Thumbnail Image</label>
-                                        <input type="file" class="form-control" name="thumbnail_image_link">
+                                        <input type="file"  class="form-control" name="thumbnail_image_link">
                                     </div>
                                     <div class="mb-3 col-md-6">
                                         <div class="d-flex" >
@@ -81,7 +87,7 @@
                                              @endforeach
                                     </div>
                                         <label for="gallery_images_link" class="form-label">Gallery Images</label>
-                                        <input type="file" class="form-control" name="gallery_images_link[]" multiple>
+                                        <input type="file"  class="form-control" name="gallery_images_link[]" multiple>
                                     </div>
                                     <div class="mb-3 col-md-6">
                                         <label for="overview_description" class="form-label">Overview Description</label>

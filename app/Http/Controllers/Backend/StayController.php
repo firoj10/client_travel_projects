@@ -59,12 +59,6 @@ class StayController extends Controller
     $request->thumbnail_image_link->move(public_path('thumbnails'), $thumbnailName);
     $thumbnailPath = 'thumbnails/' . $thumbnailName;
 
-        // $galleryImages = [];
-        // $gallaryName = time() . '_' . $request->thumbnail_image_link->getClientOriginalName();
-        
-        // foreach ($request->file('gallary_images_link',$gallaryName ) as $image) {
-        //     $galleryImages[] = $image->move(public_path('gallery'));
-        // }
         $galleryImages = [];
         foreach ($request->file('gallery_images_link') as $image) {
             $imageName = time() . '_' . $image->getClientOriginalName();
@@ -98,52 +92,6 @@ class StayController extends Controller
         return redirect()->route('admin.stay.index');
 }
 
-
-
-    // public function store(Request $request)
-    // {
-    //     $request->validate([
-    //         'name' => ['required'],
-    //         'star_rating' => ['required'],
-    //         'address' => ['required'],
-    //         'city' => ['required'],
-    //         'state' => ['required'],
-    //         'country' => ['required'],
-    //         // 'short_description' => ['required'],
-    //         'short_description' => ['required','array'],
-    //         'short_description.*' => ['required','string','max:255'],
-    //         'overview_description' => ['required'],
-    //         'accommodation_description' => ['required'],
-    //         'spa_and_wellness_description' => ['required'],
-    //         'activities_and_facilities_description' => ['required'],
-    //         'status' => ['required', 'boolean'],
-    //         'stay_type' => ['required'],
-    //     ]);
-    //     $inputs = $request->short_description;
-
-     
-    //     $jsonInputs = json_encode($inputs);
-       
-    //     $stay = new Stay(); 
-    //     $stay->name = $request->name;
-    //     $stay->star_rating = $request->star_rating;
-    //     $stay->address = $request->address;
-    //     $stay->city = $request->city;
-    //     $stay->state = $request->state;
-    //     $stay->country = $request->country;
-    //     $stay->short_description =  $jsonInputs;
-    //     // $stay->short_description = $request->short_description;
-    //     $stay->overview_description = $request->overview_description;
-    //     $stay->accommodation_description = $request->accommodation_description;
-    //     $stay->spa_and_wellness_description = $request->spa_and_wellness_description;
-    //     $stay->activities_and_facilities_description = $request->activities_and_facilities_description;
-    //     $stay->status = $request->status;
-    //     $stay->stay_type = $request->stay_type;
-    //     $stay->save();
-    //     return redirect()->route('admin.stay.index')->with('success', 'Stay created successfully!');
-    // }
-   
-
     // /**
     //  * Display the specified resource.
     //  */
@@ -167,8 +115,8 @@ class StayController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'thumbnail_image_link'=> ['required', 'max:2028', 'image'],
-            'gallery_images_link'=> ['required', ],
+            // 'thumbnail_image_link'=> ['required', 'max:2028', 'image'],
+            // 'gallery_images_link'=> ['required', ],
             'name' => ['required'],
             'star_rating' => ['required'],
             'address' => ['required'],
@@ -228,13 +176,20 @@ class StayController extends Controller
             $stay->gallery_images_link = json_encode($galleryImages);
         }
        
+        // $stay->short_description = json_encode($validatedData['short_description']);
+
+        $inputs = $request->short_description;
+
+     
+        $jsonInputs = json_encode($inputs);
+
         $stay->name = $request->name;
         $stay->star_rating = $request->star_rating;
         $stay->address = $request->address;
         $stay->city = $request->city;
         $stay->state = $request->state;
         $stay->country = $request->country;
-        // $stay->short_description = $request->short_description;
+        $stay->short_description =  $jsonInputs;
         $stay->overview_description = $request->overview_description;
         $stay->accommodation_description = $request->accommodation_description;
         $stay->spa_and_wellness_description = $request->spa_and_wellness_description;
