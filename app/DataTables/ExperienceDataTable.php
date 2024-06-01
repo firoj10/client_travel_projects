@@ -2,6 +2,8 @@
 
 namespace App\DataTables;
 
+use App\Models\Experience;
+use App\Models\Package;
 use App\Models\Stay;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
@@ -12,7 +14,7 @@ use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
 
-class StayDataTable extends DataTable
+class ExperienceDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -26,10 +28,10 @@ class StayDataTable extends DataTable
             return '<img src="'.$query->thumbnail_image_link.'" alt="Image" style="width: 50px; height: 50px;">';
         })
             ->addColumn('action', function($query){
-                $showBtn = "<a href='".route('admin.stay.show', $query->id)."' class='btn btn-success'>show</a>";
-                $editBtn = "<a href='".route('admin.stay.edit', $query->id)."' class='btn mx-1 btn-primary'>Edit</a>";
+                $showBtn = "<a href='".route('admin.experience.show', $query->id)."' class='btn btn-success'>show</a>";
+                $editBtn = "<a href='".route('admin.experience.edit', $query->id)."' class='btn mx-1 btn-primary'>Edit</a>";
                
-                $deleteBtn = "<a href='".route('admin.stay.destroy', $query->id)."' class='btn btn-danger  delete-data'>Delete</a>";
+                $deleteBtn = "<a href='".route('admin.experience.destroy', $query->id)."' class='btn btn-danger  delete-data'>Delete</a>";
                 return "<div class='d-flex '>" .$showBtn  .$editBtn. $deleteBtn."</div>";
             })
             ->addColumn('thumbnail', function($query) {
@@ -47,7 +49,7 @@ class StayDataTable extends DataTable
     /**
      * Get the query source of dataTable.
      */
-    public function query(Stay $model): QueryBuilder
+    public function query(Experience $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -58,7 +60,7 @@ class StayDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('stay-table')
+                    ->setTableId('experience-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                    
@@ -82,10 +84,9 @@ class StayDataTable extends DataTable
         return [
          
             Column::make('id'),
-            Column::make('name'),
-            Column::make('stay_type'),
-            Column::make('city'),
-            Column::make('address'),
+            Column::make('title'),
+            Column::make('sub_title'),
+         
             Column::make('thumbnail'),
          
             Column::computed('action')
@@ -101,6 +102,6 @@ class StayDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Stay_' . date('YmdHis');
+        return 'Experience_' . date('YmdHis');
     }
 }

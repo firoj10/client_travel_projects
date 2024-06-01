@@ -13,7 +13,11 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
-
+    // git remote -v
+    // git remote remove origin
+    // git remote add origin url
+    // git remote -v
+    // git push origin main
     /**
      * Bootstrap any application services.
      */

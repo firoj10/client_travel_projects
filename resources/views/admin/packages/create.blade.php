@@ -14,7 +14,7 @@
                             <div >
                                 <div class="d-flex justify-content-between">
                                     <h4>Stay Form </h4>
-                                    <a  class="btn btn-primary" href="{{route('admin.stay.index')}}">Back</a>
+                                    <a  class="btn btn-primary" href="{{route('admin.package.index')}}">Back</a>
 
                                 </div>
 
@@ -30,7 +30,7 @@
                                 </ul>
                             </div>
                         @endif
-                            <form action="{{ route('admin.stay.store') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('admin.package.store') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="mb-3 col-md-6">
@@ -117,37 +117,6 @@
                                     </div>
 
                                     <div class="mb-3 col-md-6">
-                                        <label for="overview_description" class="form-label">Overview Description</label>
-                                        <textarea class="form-control" name="overview_description" rows="3"></textarea>
-                                          @if ($errors->has('overview_description'))
-                                            <span class="text-danger">{{ $errors->first('overview_description') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="mb-3 col-md-6">
-                                        <label for="accomodation_description" class="form-label">Accommodation
-                                            Description</label>
-                                        <textarea class="form-control" name="accommodation_description" rows="3"></textarea>
-                                          @if ($errors->has('accommodation_description'))
-                                            <span class="text-danger">{{ $errors->first('accommodation_description') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="mb-3 col-md-6">
-                                        <label for="spa_and_wellness_description" class="form-label">Spa and Wellness
-                                            Description</label>
-                                        <textarea class="form-control" name="spa_and_wellness_description" rows="3"></textarea>
-                                          @if ($errors->has('spa_and_wellness_description'))
-                                            <span class="text-danger">{{ $errors->first('spa_and_wellness_description') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="mb-3 col-md-6">
-                                        <label for="activities_and_facilities_description" class="form-label">Activities and
-                                            Facilities Description</label>
-                                        <textarea class="form-control" name="activities_and_facilities_description" rows="3"></textarea>
-                                          @if ($errors->has('activities_and_facilities_description'))
-                                            <span class="text-danger">{{ $errors->first('activities_and_facilities_description') }}</span>
-                                        @endif
-                                    </div>
-                                    <div class="mb-3">
                                         <label for="status" class="form-label">Status</label>
                                         <select class="form-select" name="status">
                                             <option value= "1">Active</option>
@@ -158,16 +127,18 @@
                                     @enderror
                                     </div>
                                     <div class="mb-3 col-md-6">
-                                        <label for="stay_type" class="form-label">Stay Type</label>
-                                        <select class="form-select" name="stay_type">
-                                            <option value="hotel">Hotel</option>
-                                            <option value="resort">Resort</option>
-                                            <option value="guest_house">Guest House</option>
-                                        </select>
-                                       
-                                        @error('stay_type')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                        <label for="price">Price</label>
+                                        <input class="form-control" type="text" id="price" name="price" value="{{ old('price') }}" required>
+                                        @if ($errors->has('price'))
+                                        <span class="text-danger">{{ $errors->first('price') }}</span>
+                                    @endif
+                                    </div>
+                                    <div class="mb-3 col-md-6">
+                                        <label for="number_of_nights">Number of Nights</label>
+                                        <input class="form-control" type="number" id="number_of_nights" name="number_of_nights" value="{{ old('number_of_nights') }}" required>
+                                        @if ($errors->has('number_of_nights'))
+                                        <span class="text-danger">{{ $errors->first('number_of_nights') }}</span>
+                                    @endif
                                     </div>
                                 </div>
 
