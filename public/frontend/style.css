@@ -3,7 +3,10 @@
 ::before {
     box-sizing: border-box;
 }
+body{
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 
+}
 :root {
     --primary-color: #E89E25;
     --secondary-color: #2F3991;
@@ -26,13 +29,11 @@
 a {
     text-decoration: none !important;
 }
-
 .svg-inline--fa {
     width: 20px;
     height: 20px;
 
 }
-
 .navbar {
     padding: 1rem 3rem !important;
     background: rgba(255, 255, 255, 0.50);

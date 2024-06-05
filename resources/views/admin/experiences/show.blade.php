@@ -35,11 +35,6 @@
                 <th style="height: 20px !important">Name</th>
                 <td style="height: 30px !important">{{ $experience->title }}</td>
             </tr>
-
-            
-           
-
-
         </table>
 
         <p class="font-weight-bold">Short Description</p>

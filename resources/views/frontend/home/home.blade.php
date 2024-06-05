@@ -22,6 +22,7 @@
 <!--.............................................Have a Glance on Resorts -->
 @include('frontend.home.section.resort')
 <!--.............................................Our Experience -->
+
 <section class="container-fluid px-0">
     <div>
         <div class="experience-heading text-center mb-4">
@@ -32,87 +33,26 @@
     </div>
     <div class="swiper2 mySwiper2">
         <div class="swiper-wrapper">
+            @foreach ($experiences as $experience)
             <div class="swiper-slide ">
+                
                 <div class=" exp-card  position-relative"
-                    style="background-image: url('{{ asset('frontend/img/expreance6.png') }}');">
+                    style="background-image: url('{{$experience->thumbnail_image_link}}');">
                     <div class=" position-absolute" style=" top:70%; left: 7%;">
+                                    <a href="{{route('experiencedetails',['name'=>$experience->title, 'id'=>$experience->id ])}}">
+
                         <div class=" text-center px-4">
-                            <h2 class="expreance-title ">Snorkeling</h2>
-                            <p class="expreance-content ">Lorem ipsum dolor sit1
-                            </p>
+                            <h2 class="expreance-title ">{{$experience->title}}</h2>
+                            <p class="expreance-content ">{{$experience->sub_title}}</p>
                         </div>
+                          </a>
                     </div>
 
                 </div>
+            
             </div>
-            <div class="swiper-slide ">
-                <div class=" exp-card  position-relative"
-                    style="background-image: url('{{ asset('frontend/img/experience-1.png') }}');">
-                    <div class=" position-absolute" style=" top:70%; left: 7%;">
-                        <div class=" text-center px-4">
-                            <h2 class="expreance-title ">Snorkeling</h2>
-                            <p class="expreance-content ">Lorem ipsum dolor sit2
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="swiper-slide ">
-                <div class=" exp-card  position-relative"
-                    style="background-image: url('{{ asset('frontend/img/experience5.jpg') }}');">
-                    <div class=" position-absolute" style=" top:70%; left: 7%;">
-                        <div class=" text-center px-4">
-                            <h2 class="expreance-title ">Snorkeling</h2>
-                            <p class="expreance-content ">Lorem ipsum dolor sit3
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class=" exp-card  position-relative"
-                    style="background-image: url('{{ asset('frontend/img/experience2.jpg') }}');">
-                    <div class=" position-absolute" style=" top:70%; left: 7%;">
-                        <div class=" text-center px-4">
-                            <h2 class="expreance-title ">Snorkeling</h2>
-                            <p class="expreance-content ">Lorem ipsum dolor sit4
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="swiper-slide ">
-                <div class=" exp-card  position-relative"
-                    style="background-image: url('{{ asset('frontend/img/experience3.jpeg') }}');">
-                    <div class=" position-absolute" style=" top:70%; left: 7%;">
-                        <div class=" text-center px-4">
-                            <h2 class="expreance-title ">Snorkeling</h2>
-                            <p class="expreance-content ">Lorem ipsum dolor sit5
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="swiper-slide ">
-                <div class=" exp-card  position-relative"
-                    style="background-image: url('{{ asset('frontend/img/experience6.jpeg') }}');">
-                    <div class=" position-absolute" style=" top:70%; left: 7%;">
-                        <div class=" text-center px-4">
-                            <h2 class="expreance-title ">Snorkeling</h2>
-                            <p class="expreance-content ">Lorem ipsum dolor sit6
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
-
+      
+            @endforeach
         </div>
         <div class="swiper-pagination"></div>
     </div>
@@ -123,6 +63,7 @@
     <!-- Initialize Swiper -->
 
 </section>
+
 <!--.............................................Tailor-Made Holidays Packages -->
 
 <section class="tailor-made py-5 overflow-hidden">
@@ -134,531 +75,70 @@
             <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
         </div>
         <div class="row  my-5 packages_home">
-            <div class="col-lg-6 col-md-6 col-xl-3 hove_transition position-relative mt-3">
-                <div class="package-card">
-                    <div class="card-header overflow-hidden">
-                        <img src="{{ asset('frontend/img/resorts/resorts-15.png') }}" alt="resort-img"
+  @foreach ($packages as $package)
+  <div class="col-lg-6 col-md-6 col-xl-3 hove_transition position-relative mt-3">
+    <div class="package-card">
+        <div class="card-header overflow-hidden">
+            <img src="{{ asset($package->thumbnail_image_link)}}" alt="resort" class="img-fluid">
+            
+        </div>
+        <div class="card-body">
+            <a href="{{route('packagesdetails',['name'=>$package->name, 'id'=>$package->id ])}}" class="anchor_click_function"
+                data-pagename="package-details">
+                <div class="text-center">
+                    <div class="rating-star  py-2">
+                        <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
                             class="img-fluid">
                     </div>
-                    <div class="card-body">
-                        <a href="javascript:void(0)" class="anchor_click_function"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star  py-2">
-                                    <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Kuramathi Island Resort</h5>
-                                <svg class="svg-inline--fa fa-location-dot " style="color: #E50027;"
-                                    aria-hidden="true" focusable="false" data-prefix="fas"
-                                    data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot " style="color:#E50027;"></i> Font Awesome fontawesome.com -->
-                                <span class="text-black">Rasdhoo Atoll</span>
-                            </div>
-                            <div class="card-list  py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i>
-                                        Beach Villa <br>
+                    
+                    <h5 class="black-color fw-bold my-1">{{$package->name }}</h5>
 
-                                    </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> Buffet Breakfast,
-                                        Lunch &amp; Dinner&nbsp;
-                                        &nbsp;<br>
-                                    </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> Return Speedboat
-                                        Transfer (Airport –
-                                        Resort – Airport)<br>
-                                    </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> All Applicable
-                                        Taxes <br>
-                                    </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> Meet and assist on
-                                        arrival and departure.
-                                    </p>
+                    <svg class="svg-inline--fa fa-location-dot " style="color: #E50027;"
+                        aria-hidden="true" focusable="false" data-prefix="fas"
+                        data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 384 512" data-fa-i2svg="">
+                        <path fill="currentColor"
+                            d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
+                        </path>
+                    </svg><!-- <i class="fa-solid fa-location-dot " style="color:#E50027;"></i> Font Awesome fontawesome.com -->
+                    <span style="color: black">{{$package->address}}</span>
+                </div>
+                <div class="card-list  py-2 text-black">
+                    <ul class="bullets_list_package">
+                        @php
+                        $descriptions = json_decode($package->short_description);
+                    @endphp
+                    @foreach ($descriptions as $description)
+                        <li></li>
+                        <p class="mb-0" style="color: black"><i class="fa fa-check-square-o px-2"></i>
+                            {{ $description }}<br></p>
+                    @endforeach
 
-                                </ul>
-
-                            </div>
-
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)" class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/kuramathi-island-resort"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/kuramathi-island-resort"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-
+                    </ul>
 
                 </div>
 
+            </a>
+            <div class="text-center py-3"><a href="javascript:void(0)" class="anchor_click_function"
+                    data-url="https://holidayslinkmaldives.com/package/kuramathi-island-resort"
+                    data-pagename="package-details">
+
+                </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
+                    data-url="https://holidayslinkmaldives.com/package/kuramathi-island-resort"
+                    data-pagename="package-details">More Details</a>
             </div>
-            <div class="col-lg-6 col-md-6 col-xl-3 hove_transition  position-relative mt-3">
-                <div class="package-card">
-                    <div class="card-header overflow-hidden">
-                        <img src="{{ asset('frontend/img/resorts/resorts-16.png') }}" alt="resort-img"
-                            class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                        <a href="javascript:void(0)" class="anchor_click_function"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star py-2">
-                                    <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Kuredu Island Resort</h5>
-                                <svg class="svg-inline--fa fa-location-dot " style="color: #E50027;"
-                                    aria-hidden="true" focusable="false" data-prefix="fas"
-                                    data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot " style="color:#E50027;"></i> Font Awesome fontawesome.com -->
-
-                                <span class="text-black">Rasdhoo Atoll</span>
-                            </div>
-                            <div class="card-list  py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i>
-                                        &nbsp;Garden<span>&nbsp;Bungalow <br>
-                                        </span>
-                                    </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> Buffet
-                                            Breakfast, Lunch &amp;
-                                            Dinner &nbsp;<br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> Return
-                                            Seaplane Transfer (Airport –
-                                            Resort – Airport)<br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> All
-                                            Applicable Taxes <br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span>
-                                        </span><span>Meet
-                                            and assist on arrival and departure</span> </p>
-
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)" class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/kuredu-island-resort"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/kuredu-island-resort"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="col-lg-6 col-md-6 col-xl-3 hove_transition   position-relative mt-3">
-                <div class="package-card">
-                    <div class="card-header overflow-hidden">
-                        <img src="{{ asset('frontend/img/resorts/resorts-17.png') }}" alt="resort-img"
-                            class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                        <a href="javascript:void(0)" class="anchor_click_function"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star py-2">
-                                    <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Meeru Island Resort</h5>
-                                <svg class="svg-inline--fa fa-location-dot " style="color: #E50027;"
-                                    aria-hidden="true" focusable="false" data-prefix="fas"
-                                    data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot " style="color:#E50027;"></i> Font Awesome fontawesome.com -->
-                                <span class="text-black">Kaafu Atoll </span>
-                            </div>
-                            <div class="card-list  py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i>
-                                        <span> Jacuzzi Water Villa <br>
-                                        </span>
-                                    </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> Buffet
-                                            Breakfast, Lunch &amp;
-                                            Dinner &nbsp;<br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> Return
-                                            Seaplane Transfer (Airport –
-                                            Resort – Airport)<br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> All
-                                            Applicable Taxes <br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span>
-                                        </span><span style=" ">Meet
-                                            and assist on arrival and departure</span> </p>
-
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)"
-                                class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/meeru-island-resort"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/meeru-island-resort"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="col-lg-6 col-md-6 col-xl-3 hove_transition   position-relative mt-3">
-                <div class="package-card">
-                    <div class="card-header overflow-hidden">
-                        <img src="{{ asset('frontend/img/resorts/resorts-18.png') }}" alt="resort-img"
-                            class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                        <a href="javascript:void(0)" class="anchor_click_function"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star py-2">
-                                    <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Sun Siyam Iru Veli</h5>
-                                <svg class="svg-inline--fa fa-location-dot " style="color: #E50027;"
-                                    aria-hidden="true" focusable="false" data-prefix="fas"
-                                    data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot " style="color:#E50027;"></i> Font Awesome fontawesome.com -->
-                                <span class="text-black">Dhaalu Atoll</span>
-                            </div>
-                            <div class="card-list  py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i>
-                                        <span> Ocean Villa with Pool <br>
-                                        </span>
-                                    </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> Buffet
-                                            Breakfast, Lunch &amp;
-                                            Dinner &nbsp;<br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> Return
-                                            Seaplane Transfer (Airport –
-                                            Resort – Airport)<br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> All
-                                            Applicable Taxes <br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span>
-                                        </span><span>Meet
-                                            and assist on arrival and departure</span> </p>
-
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)"
-                                class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/sun-siyam-iru-veli"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/sun-siyam-iru-veli"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="col-lg-6 col-md-6 col-xl-3 hove_transition   position-relative mt-3">
-                <div class="package-card">
-                    <div class="card-header overflow-hidden">
-                        <img src="{{ asset('frontend/img/resorts/resorts-19.png') }}" alt="resort-img"
-                            class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                        <a href="javascript:void(0)" class="anchor_click_function"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star py-2">
-                                    <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Diamonds Athuruga Maldives</h5>
-                                <svg class="svg-inline--fa fa-location-dot " style="color: #E50027;"
-                                    aria-hidden="true" focusable="false" data-prefix="fas"
-                                    data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot " style="color:#E50027;"></i> Font Awesome fontawesome.com -->
-                                <span class="text-black">South Ari Atoll</span>
-                            </div>
-                            <div class="card-list  py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i>
-                                        <span>Water Villa <br>
-                                        </span>
-                                    </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> Buffet
-                                            Breakfast, Lunch &amp;
-                                            Dinner &nbsp;<br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> Return
-                                            Seaplane Transfer (Airport –
-                                            Resort – Airport)<br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> All
-                                            Applicable Taxes <br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span>
-                                        </span><span>Meet
-                                            and assist on arrival and departure.</span> </p>
-
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)"
-                                class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/diamonds-athuruga-maldives"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/diamonds-athuruga-maldives"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="col-lg-6 col-md-6 col-xl-3 hove_transition   position-relative mt-3">
-                <div class="package-card">
-                    <div class="card-header overflow-hidden">
-                        <img src="{{ asset('frontend/img/resorts/resorts-20.png') }}" alt="resort-img"
-                            class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                        <a href="javascript:void(0)" class="anchor_click_function"
-                            data-url="https://holidayslinkmaldives.com/package/sandies-bathala-maldives"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star py-2">
-                                    <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Sandies Bathala Maldives</h5>
-                                <svg class="svg-inline--fa fa-location-dot " style="color: #E50027;"
-                                    aria-hidden="true" focusable="false" data-prefix="fas"
-                                    data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot " style="color:#E50027;"></i> Font Awesome fontawesome.com -->
-                                <span class="text-black">North Ari Atoll </span>
-                            </div>
-                            <div class="card-list  py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i>
-                                        <span>Water Villa <br>
-                                        </span>
-                                    </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> Buffet
-                                            Breakfast, Lunch &amp;
-                                            Dinner &nbsp;<br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> Return
-                                            Seaplane Transfer (Airport –
-                                            Resort – Airport)<br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> All
-                                            Applicable Taxes <br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span>
-                                        </span><span>Meet
-                                            and assist on arrival and departure.</span> </p>
-
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)"
-                                class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/sandies-bathala-maldives"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/sandies-bathala-maldives"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="col-lg-6 col-md-6 col-xl-3 hove_transition   position-relative mt-3">
-                <div class="package-card">
-                    <div class="card-header overflow-hidden">
-                        <img src="{{ asset('frontend/img/resorts/resorts-21.png') }}" alt="resort-img"
-                            class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                        <a href="javascript:void(0)" class="anchor_click_function"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star py-2">
-                                    <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Sun Siyam Olhuveli</h5>
-                                <svg class="svg-inline--fa fa-location-dot " style="color: #E50027;"
-                                    aria-hidden="true" focusable="false" data-prefix="fas"
-                                    data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg>
-                                <span class="text-black">South Male Atoll</span>
-                            </div>
-                            <div class="card-list  py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span
-                                            style="font-family: Verdana;">
-                                        </span><span style="font-size:11.0pt;line-height:107%; ">Water Villa
-                                        </span><br><span style="font-family: Poppins;">
-                                        </span></span><span style="font-family: Poppins;">
-                                        </span> </p><span style="font-family: Poppins;">
-                                    </span>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span
-                                            style="font-size:11.0pt;line-height:107%; "> Buffet Breakfast, Lunch
-                                            &amp; Dinner
-                                            &nbsp;</span><br><span style="font-family: Poppins;">
-                                        </span></span> </p><span style="font-family: Poppins;">
-                                    </span>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span
-                                            style=" "> Return Seaplane Transfer
-                                            (Airport – Resort –
-                                            Airport)</span><br><span style="font-family: Poppins;">
-                                        </span></span> </p><span style="font-family: Poppins;">
-                                    </span>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span
-                                            style="font-size:11.0pt;line-height:107%; "> All Applicable Taxes
-                                        </span><br><span style="font-family: Poppins;">
-                                        </span></span> </p><span style="font-family: Poppins;">
-                                    </span>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span>Meet and
-                                            assist on arrival
-                                            and departure.</span> </p><span style="font-family: Poppins;">
-                                    </span>
-
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)"
-                                class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/sun-siyam-olhuveli"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/sun-siyam-olhuveli"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-xl-3 hove_transition   position-relative mt-3">
-                <div class="package-card">
-                    <div class="card-header overflow-hidden">
-                        <img src="{{ asset('frontend/img/resorts/resorts-22.png') }}" alt="resort-img"
-                            class="img-fluid">
-                    </div>
-                    <div class="card-body">
-                        <a href="javascript:void(0)" class="anchor_click_function"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star py-2">
-                                    <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Siyam World Maldives</h5>
-                                <svg class="svg-inline--fa fa-location-dot " style="color: #E50027;"
-                                    aria-hidden="true" focusable="false" data-prefix="fas"
-                                    data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot " style="color:#E50027;"></i> Font Awesome fontawesome.com -->
-                                <span class="text-black">Dhigurah, Noonu Atoll</span>
-                            </div>
-                            <div class="card-list  py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i>
-                                        <span>Water Villa with Pool &amp; Slide <br>
-                                        </span>
-                                    </p>
-
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> Return
-                                            Seaplane Transfer (Airport –
-                                            Resort – Airport)<br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> Buffet
-                                            Breakfast, Lunch &amp;
-                                            Dinner &nbsp;<br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span> All
-                                            Applicable Taxes <br>
-                                        </span> </p>
-                                    <p class="mb-0"><i class="fa fa-check-square-o px-2"></i> <span>
-                                        </span><span>Two
-                                            Child Stay &amp; Eat Free</span> </p>
+        </div>
 
 
-                                    </span> </p>
+    </div>
 
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)"
-                                class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/siyam-world-maldives"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/siyam-world-maldives"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+</div>
+  @endforeach
+            
+          
 
         </div>
-        <div class="text-center">
-            <a href="javascript:void(0)" class="btn btn-primary anchor_click_function">View More Packages</a>
-        </div>
+   
     </div>
 </section>
 

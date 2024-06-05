@@ -1,8 +1,13 @@
 <?php
 
 use App\Http\Controllers\Backend\AdminController;
+
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\Frontend\HomeController;
+
+
+use App\Http\Controllers\Frontend\PageController;
+use App\Http\Controllers\Frontend\QuotationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,7 +41,27 @@ require __DIR__.'/auth.php';
 
 Route::get('admin/login',[AdminController::class, 'login'])->name('admin.login');
 
+
+
+// page-route.................................................
+Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('/resortdetails/{id}', [HomeController::class, 'resortdetails'])->name('resortdetails');
+
+Route::get('/resorts', [PageController::class, 'resorts'])->name('resorts');
+Route::get('/packages', [PageController::class, 'packages'])->name('packages');
+Route::get('/packagesdetails/{id}', [PageController::class, 'packagesdetails'])->name('packagesdetails');
+Route::get('/experience', [PageController::class, 'experience'])->name('experience');
+Route::get('/experiencedetails/{id}', [PageController::class, 'experiencedetails'])->name('experiencedetails');
+Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+
+
+//Quotation
+Route::post('/submit-quotation', [QuotationController::class, 'store'])->name('quotation.store');
+// Route::post('/quotation', [QuotationController::class, 'index'])->name('quotation.index');
+
+
+
 
 
 

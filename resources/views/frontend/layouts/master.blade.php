@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('frontend/style.css') }}">
-    <title>Document</title>
+    <title>Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -20,8 +20,8 @@
         }
 
         body {
-            background: #eee;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            /* background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
 
         }
 
@@ -65,7 +65,6 @@
     <section>
         @include('frontend.layouts.topbar')
     </section>
-
     <section class="header_swiper_slider ">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -135,7 +134,6 @@
                                     Paradise"</span></h1>
                             <p class="black-color mb-4"></p>
                             <a href="https://holidayslinkmaldives.com/" class="btn btn-secondary  px-5">Explore</a>
-
                         </div>
                     </div>
                     <div class="col-12 col-md-8 col-lg-7 col-xl-4  d-flex flex-column justify-content-center wow fadeInRight"
@@ -145,45 +143,36 @@
                             <div class="form-header text-center py-1">
                                 <h5 class="white-color text-uppercase fw-bold fs-6 py-1">Request a Quote</h5>
                             </div>
-                            <form class="submit_quote_form" novalidate="novalidate">
+                            <form class="submit_quote_form" action="{{ route('quotation.store') }}" method="POST" novalidate="novalidate">
+                                @csrf
                                 <div class="form-body py-3 px-4">
                                     <div class="row justify-content-between">
                                         <div class="col-6 input d-flex align-items-center">
-                                            <!-- <i class="fa-solid fa-calendar-days"></i> -->
                                             <img src="{{ asset('frontend/img/form/calendar.png') }}" alt="Calendar"
                                                 class="img-fluid">
                                             <input type="text" placeholder="Tentative Arrival Date"
-                                                class="date_picker" name="date" aria-invalid="true">
-                                            <!-- <label id="date-error" class="error" for="date">Please put Tentative Date</label>  -->
+                                                class="date_picker" id="datepicker" name="date" aria-invalid="true">
 
                                         </div>
                                         <div class="col-6 input d-flex align-items-center">
-                                            <!-- <i class="fa-solid fa-moon"></i> -->
                                             <img src="{{ asset('frontend/img/form/sleeping.png') }}" alt="Sleeping"
                                                 class="img-fluid">
-                                            <!-- <input type="text" placeholder="Number Of Nights *"> -->
                                             <input type="number" placeholder="No of Nights" min="1"
                                                 max="100" name="no_off_nights" aria-invalid="true">
-                                            <!-- <label id="no_off_nights-error" class="error" for="no_off_nights">Please Enter Number of nights</label>  -->
 
-                                            <!-- <i class="fa-solid fa-angle-down"></i> -->
                                         </div>
                                     </div>
                                     <div class="row justify-content-between my-4">
                                         <div class="col-6 input d-flex align-items-center">
-                                            <!-- <i class="fa-solid fa-calendar-days"></i> -->
                                             <img src="{{ asset('frontend/img/form/couple.png') }}" alt="Couple"
                                                 class="img-fluid">
-                                            <!-- <input type="text" placeholder="Tentative Arrival Date">  -->
                                             <input type="number" placeholder="No of Adults" min="1"
                                                 max="100" name="no_off_adults">
 
                                         </div>
                                         <div class="col-6 input d-flex align-items-center">
-                                            <!-- <i class="fa-solid fa-calendar-days"></i> -->
                                             <img src="{{ asset('frontend/img/form/children.png') }}" alt="Children"
                                                 class="img-fluid">
-                                            <!-- <input type="text" placeholder="Tentative Arrival Date">  -->
                                             <input type="number" placeholder="No of Kids" min="0"
                                                 max="100" name="no_off_kids">
 
@@ -191,10 +180,8 @@
                                     </div>
                                     <div class="row justify-content-between my-4">
                                         <div class="col-6 input d-flex align-items-center">
-                                            <!-- <i class="fa-solid fa-calendar-days"></i> -->
                                             <img src="{{ asset('frontend/img/form/couple.png') }}" alt="Couple"
                                                 class="img-fluid">
-                                            <!-- <input type="text" placeholder="Tentative Arrival Date">  -->
                                             <select class="form-select" aria-label="Interested In*"
                                                 name="interested_in">
                                                 <option value="">Interested In*</option>
@@ -205,7 +192,6 @@
                                             </select>
                                         </div>
                                         <div class="col-6 input d-flex align-items-center">
-                                            <!-- <i class="fa-solid fa-calendar-days"></i> -->
                                             <img src="{{ asset('frontend/img/form/user.png') }}" alt="User"
                                                 class="img-fluid">
                                             <input type="text" placeholder="Your Name*" name="name">
@@ -215,14 +201,12 @@
 
                                     <div class="row justify-content-between my-4">
                                         <div class="col-6 input d-flex align-items-center">
-                                            <!-- <i class="fa-solid fa-calendar-days"></i> -->
                                             <img src="{{ asset('frontend/img/form/email.png') }}" alt="Email"
                                                 class="img-fluid">
                                             <input type="text" placeholder="Your Email*" name="email">
 
                                         </div>
                                         <div class="col-6 input d-flex align-items-center">
-                                            <!-- <i class="fa-solid fa-calendar-days"></i> -->
                                             <img src="{{ asset('frontend/img/form/phone.png') }}" alt="Phone"
                                                 class="img-fluid">
                                             <input type="num" placeholder="Phone / Whatsapp*"
@@ -237,16 +221,13 @@
                                                 placeholder="Please advise your required villa category." aria-invalid="false"></textarea>
                                         </div>
                                     </div>
-                                    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response"
-                                        value="03AFcWeA7gbuqdjvSzLY4MMDtRS7EIeZ2zlRH7T-DCW11V3BjrhPFAI8hdrwcB0_y7lN79AqAUj9Lp8WzxYYUlHMY4ZHuLYKZSIjsDPixfKBhwCumKXNSB9v34WzIPfxInHXathWCyW-5lRtbyE2AGx8heR6nNapbWlRp3myTBc2Rrx212Vu4r5wMpCxz1bUQxK9DQDLYGzXyJKjCQNCkcNi53GD998KZDXpTeGohBfcyto0KxjdJuc0OiO8NeNyUVH7axjFG31asTJJdmKec7wcZbe7241qiyTx_TX9kzm_ZWoOi3OQ-yRFAZJxgDD7fIPti4uhgp2wUTOlvI1Qjhh-gpzbaYnOXfqSF8j2nannYoinFdNwUi5X0i3aOfmCay-VeNdKttWX1-W1XV4yb_FvZJjkImqjtJLgG-bgKTLMscTX-UkxIUgi2weCIuKKepdU4pYSTY9CgTfFyyG-vJ3YmN5a9GD8Oxh96oZ0Rkbggj4HQPjUmKavFTQQhYvSa3hDN55wFu2rNyPzhlDUnwuVTx0_KmojmQqxNz5LBkdgKwhsXqaAQsaxOhsDRphV8pTnCCydS25jM8B4lINQCTbZtHoHwY7fbUNr-VxnDkFE9Ah22mjbxZYMrgBrFDoSnfU04fZB_EgKal3yXNy7TholEUZPojEQeK042MIZedcew2ty5is0qGn-lY4Eib2-qxQOCyECh0peJb6cojpYG5vzgGCFbfTAwASmwNC5krAvQWGqL7iHtM6alsONh3_50Ef0lWFzO_4SPbNzXJv9adxSuKNkKzRkTwYtZzLYH6MDZaKdo9D3YNLbx8f5m64v_43sOu23raC9kZD6Uq0kuNF7mOqehiF0qlZ3GX76nRWKIpJTUPAy6w7spzDU6GwjslVXVPYJd5FGELnwouHmg6Axvm8-faYSCVDCfrzA3YK3X8XJ8dn60wjZOpjWuFTyE_alimywNu3YgJCs7so1c6dot56Q6LlN7pLSe3B92uF4Hv14L9MKU5t-qtWtvcLyUiqT4PW0BpgZ_WrL6_rUnKfjvpf4LASaWkeEBGgZCy4bRkXP9KrhmTUR1patGpwWBFHyRTrQXuXmnffm9CtMhbTD4jgtz-6oErBcARtJW1SOUNCJ2WC_-MS4qUOYEiIaKtM-LO7CyjwnE6EMZ1n-ImWPNsg7J47VhQ1Z_7bobJJyKK2mxUE7Zx4mDeUsWyor8pb8aBmw7j6-C9qKF52iBsfvZXqijMamAuuzWehiorKRA3ci2Wm2xlEpwRe7sS07FJkwefJ0qXPZWbsOSP2ND6Dn3CnnyMxyCdCMi-dE_qhpWcUI6GNziuHSiTP7Z-ucikrdPRRCzO0X5RHdtudakFsWpWJXo5SYsNwLx54f-LMFljkdo3AE-a5BTWYs4t__NvB5Oxj3Db0QPv8kda_fydbOXgnKlLxUK3A4_o-igihsiGMniOSB47GcGFgcUPsoWNxr4va6Bdr9WvKsflzm8penVCezYiiSUu6VecgRHMlovkyemKc3Q5FEPdpEE1q3ySdrrNbrf2RZJsDbBB4n7JVH9ihk8XkAY32d19akexmjIrpqnpbjArwNfx0DBFB4doKT2v_jmLlidO3529o3IZgUb1ULaGJ8b2oUMlWjBxRvM29EnCzckOYq-IpcwPC8tePgNwQIS3pTNnYsl0tjVJH2of6sXk56h1eLXoJr-S-dFAAre4CiA_6Is">
-                                    <input type="hidden" name="action" value="validate_captcha">
+                                  
+
                                     <div class="mt-3 text-center">
                                         <button type="submit" class="btn btn-primary px-5">Submit</button>
                                     </div>
                                 </div>
-                                <input type="hidden" class="csrf_test_name" name="csrf_test_name"
-                                    value="310c4ba6e4403bdee3cef53ce23f09c7">
-                                <input type="hidden" name="resort_name" value="Home Page">
+                                
                             </form>
                         </div>
                     </div>
@@ -259,11 +240,18 @@
 
     @yield('content')
     <!--.............................................Contact section-->
-
     @include('frontend.layouts.footer')
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="{{ asset('frontend/css/wow.min.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -316,6 +304,7 @@
         // Initialize WOW.js
         new WOW().init();
     </script>
+
 </body>
 
 </html>

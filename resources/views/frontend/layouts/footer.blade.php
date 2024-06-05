@@ -79,7 +79,7 @@
 
                 </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+            <div class="col-lg-2 col-md-4 col-sm-4 col-12">
                 <h4 class="dark-blue-color fw-bold">Quick <span class="primary-color">Links</span></h4>
                 <ul class="p-0 mt-2 mt-lg-5">
                     <li><a>Home</a></li>
@@ -89,7 +89,7 @@
                     <li><a class="anchor_click_function">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+            <div class="col-lg-2 col-md-4 col-sm-4 col-12">
                 <h4 class="dark-blue-color fw-bold">Legal <span class="primary-color">Links</span></h4>
                 <ul class="p-0 mt-2 mt-lg-5">
 

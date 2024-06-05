@@ -2,8 +2,7 @@
 
 namespace App\DataTables;
 
-use App\Models\Package;
-use App\Models\Stay;
+use App\Models\Quotation;
 use Yajra\DataTables\Html\Button;
 use Yajra\DataTables\Html\Column;
 use Yajra\DataTables\Services\DataTable;
@@ -13,7 +12,7 @@ use Illuminate\Database\Eloquent\Builder as QueryBuilder;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Builder as HtmlBuilder;
 
-class PackageDataTable extends DataTable
+class QuotationDataTable extends DataTable
 {
     /**
      * Build the DataTable class.
@@ -23,32 +22,15 @@ class PackageDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-        ->addColumn('thumbnail', function($query) {
-            return '<img src="'.$query->thumbnail_image_link.'" alt="Image" style="width: 50px; height: 50px;">';
-        })
-            ->addColumn('action', function($query){
-                $showBtn = "<a href='".route('admin.package.show', $query->id)."' class='btn btn-success'>show</a>";
-                $editBtn = "<a href='".route('admin.package.edit', $query->id)."' class='btn mx-1 btn-primary'>Edit</a>";
-               
-                $deleteBtn = "<a href='".route('admin.package.destroy', $query->id)."' class='btn btn-danger  delete-data'>Delete</a>";
-                return "<div class='d-flex '>" .$showBtn  .$editBtn. $deleteBtn."</div>";
-            })
-            ->addColumn('thumbnail', function($query) {
-                $imagePath = $query->thumbnail_image_link;
-                $defaultImage = 'path/to/default/image.png'; 
-                $imageUrl = file_exists(public_path($imagePath)) ? asset($imagePath) : asset($defaultImage);
-                return '<img src="'.$imageUrl.'" alt="Image" style="width: 50px; height: 50px;">';
-            })
-
-
-            ->rawColumns(['thumbnail', 'action'])
+            // ->addColumn('action', 'quotationdatatable.action')
+            ->rawColumns(['name', 'action'])
             ->setRowId('id');
     }
 
     /**
      * Get the query source of dataTable.
      */
-    public function query(Package $model): QueryBuilder
+    public function query(Quotation $model): QueryBuilder
     {
         return $model->newQuery();
     }
@@ -59,10 +41,9 @@ class PackageDataTable extends DataTable
     public function html(): HtmlBuilder
     {
         return $this->builder()
-                    ->setTableId('package-table')
+                    ->setTableId('quotation-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
-                   
                     ->orderBy(1)
                     ->selectStyleSingle()
                     ->buttons([
@@ -81,18 +62,25 @@ class PackageDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-         
             Column::make('id'),
+            Column::make('date'),
+            Column::make('no_off_nights'),
+            Column::make('no_off_adults'),
+            Column::make('no_off_kids'),
+            Column::make('interested_in'),
             Column::make('name'),
-            Column::make('city'),
-            Column::make('address'),
-            Column::make('thumbnail'),
-         
+            Column::make('email'),
+            Column::make('phone_number'),
+            Column::make('description')
+                ->exportable(false)
+                ->printable(false)
+                ->width(60)
+                ->addClass('text-center'),
             Column::computed('action')
-            ->exportable(false)
-            ->printable(false)
-            ->width(60)
-            ->addClass('text-center'),
+                ->exportable(false)
+                ->printable(false)
+                ->width(60)
+                ->addClass('text-center'),
         ];
     }
 
@@ -101,6 +89,6 @@ class PackageDataTable extends DataTable
      */
     protected function filename(): string
     {
-        return 'Package_' . date('YmdHis');
+        return 'Quotation_' . date('YmdHis');
     }
 }

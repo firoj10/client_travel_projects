@@ -38,8 +38,6 @@ class StayDataTable extends DataTable
                 $imageUrl = file_exists(public_path($imagePath)) ? asset($imagePath) : asset($defaultImage);
                 return '<img src="'.$imageUrl.'" alt="Image" style="width: 50px; height: 50px;">';
             })
-
-
             ->rawColumns(['thumbnail', 'action'])
             ->setRowId('id');
     }
@@ -61,7 +59,6 @@ class StayDataTable extends DataTable
                     ->setTableId('stay-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
-                   
                     ->orderBy(1)
                     ->selectStyleSingle()
                     ->buttons([
@@ -87,7 +84,6 @@ class StayDataTable extends DataTable
             Column::make('city'),
             Column::make('address'),
             Column::make('thumbnail'),
-         
             Column::computed('action')
             ->exportable(false)
             ->printable(false)

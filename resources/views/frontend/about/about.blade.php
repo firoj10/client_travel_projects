@@ -6,7 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('frontend/style.css') }}">
-    <title>Document</title>
+    <title>About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -20,8 +20,8 @@
         }
 
         body {
-            background: #eee;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            /* background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
 
         }
 
@@ -66,7 +66,6 @@
     </section>
      <section class="header_nav container-fluid px-0">
         @include('frontend.layouts.header')
-
     </section> 
     
     
@@ -74,7 +73,7 @@
         style="background-image: url('https://holidayslinkmaldives.com/public/uploads/banner_about.jpeg')">
         <div class="container-fluid">
             <div class="about-content text-center">
-                <h1 class="white-color fw-bold fs-1">About <span class="primary-color">US</span></h1>
+                <h1 class="white-color fw-bold fs-1">About <span class="primary-color">US </span></h1>
             </div>
         </div>
     </section>
@@ -83,7 +82,7 @@
         <div class="container">
             <div class="row py-5">
                 <div class="col-lg-3 col-md-6 text-center">
-                    <svg class="svg-inline--fa fa-handshake primary-color fs-1" aria-hidden="true" focusable="false"
+                    <svg style="width: 40px" class="svg-inline--fa fa-handshake primary-color fs-1" aria-hidden="true" focusable="false"
                         data-prefix="far" data-icon="handshake" role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 640 512" data-fa-i2svg="">
                         <path fill="currentColor"
@@ -94,7 +93,7 @@
                     <p>We have more than 100+ travel partners to accomodate you globally.</p>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center border-left" style="border-left: 0.5px dotted #666666;">
-                    <svg class="svg-inline--fa fa-box primary-color fs-1" aria-hidden="true" focusable="false"
+                    <svg style="width: 40px" class="svg-inline--fa fa-box primary-color fs-1" aria-hidden="true" focusable="false"
                         data-prefix="fas" data-icon="box" role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512" data-fa-i2svg="">
                         <path fill="currentColor"
@@ -106,7 +105,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6 text-center border-left border-right"
                     style="border-left: 0.5px dotted #666666; border-right: 0.5px dotted #666666;">
-                    <svg class="svg-inline--fa fa-hand-holding-dollar primary-color fs-1" aria-hidden="true"
+                    <svg style="width: 40px" class="svg-inline--fa fa-hand-holding-dollar primary-color fs-1" aria-hidden="true"
                         focusable="false" data-prefix="fas" data-icon="hand-holding-dollar" role="img"
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
                         <path fill="currentColor"
@@ -117,7 +116,7 @@
                     <p>We are offering best price which you won’t be able to find anywhere.</p>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
-                    <svg class="svg-inline--fa fa-headphones primary-color fs-1" aria-hidden="true" focusable="false"
+                    <svg style="width: 40px" class="svg-inline--fa fa-headphones primary-color fs-1" aria-hidden="true" focusable="false"
                         data-prefix="fas" data-icon="headphones" role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512" data-fa-i2svg="">
                         <path fill="currentColor"

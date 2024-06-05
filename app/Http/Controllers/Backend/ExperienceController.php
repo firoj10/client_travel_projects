@@ -164,6 +164,27 @@ class ExperienceController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $stay = Experience::findOrFail($id);
+        if ($stay->thumbnail_image_link) {
+            $thumbnailPath = public_path($stay->thumbnail_image_link);
+            if (file_exists($thumbnailPath)) {
+                unlink($thumbnailPath);
+            }
+  }
+
+  // Delete the gallery images if they exist
+  if ($stay->gallery_images_link) {
+      $galleryImages = json_decode($stay->gallery_images_link, true);
+      foreach ($galleryImages as $image) {
+          $imagePath = public_path('gallery/' . $image);
+          if (file_exists($imagePath)) {
+              unlink($imagePath);
+          }
+      }
+  }
+      $stay->delete();
+
+      return response(['status' => 'success', 'message' => 'Deleted Successfully']);
     }
+    
 }
