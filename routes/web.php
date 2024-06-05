@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\AdminController;
 
 use App\Http\Controllers\Backend\ProfileController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\Frontend\HomeController;
 
 
@@ -44,7 +45,7 @@ Route::get('admin/login',[AdminController::class, 'login'])->name('admin.login')
 
 
 // page-route.................................................
-Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/resortdetails/{id}', [HomeController::class, 'resortdetails'])->name('resortdetails');
 
 Route::get('/resorts', [PageController::class, 'resorts'])->name('resorts');
@@ -64,6 +65,8 @@ Route::post('/submit-quotation', [QuotationController::class, 'store'])->name('q
 
 
 
+
+Route::get('/send-welcome-email', [EmailController::class, 'sendWelcomeEmail']);
 
 
 
