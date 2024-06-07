@@ -93,7 +93,8 @@
         style="background-image: url('https://holidayslinkmaldives.com/public/uploads/banner_about.jpeg')">
         <div class="container-fluid">
             <div class="about-content text-center">
-                <h1 class="white-color fw-bold fs-1">{{$experiencesdetails->title }}<span class="primary-color"> </span></h1>
+                <h1 class="white-color fw-bold fs-1">{{ $experiencesdetails->title }}<span class="primary-color">
+                    </span></h1>
             </div>
         </div>
     </section>

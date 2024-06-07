@@ -96,18 +96,17 @@
     <section class="form py-5 wow fadeInUp" data-wow-delay="0.1s"
         style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
         <div class="container">
-
-
             <h4 class="fw-semibold mb-2">Get in Touch With Us</h4>
             <div class="row px-3">
                 <div class="col-md-4">
-                    <form class="contact_submit">
+                    <form class="contact_submit" action="{{ route('contact.store') }}" method="POST" >
+                        @csrf
                         <div class="row justify-content-between">
                             <div class="col-6 p-0 input">
-                                <input type="text" placeholder="First Name" name="f_name">
+                                <input type="text" placeholder="First Name" name="frist_name">
                             </div>
                             <div class="col-6 p-0 input">
-                                <input type="text" placeholder="Last Name" name="l_name">
+                                <input type="text" placeholder="Last Name" name="last_name">
                             </div>
                         </div>
                         <div class="row justify-content-between my-2">
@@ -124,11 +123,10 @@
                             </div>
                         </div>
                         <div class="form-btn text-end my-3">
-                            <button type="submit" class="btn btn-primary submitbtn" name="form_contact"
-                                value="1">Send Your Message</button>
+                            <button type="submit" class="btn btn-primary submitbtn" 
+                                >Send Your Message</button>
                         </div>
-                        <input type="hidden" class="csrf_test_name" name="csrf_test_name"
-                            value="93f63f47bcecaec05d0e6463581a56e6">
+                       
                     </form>
                 </div>
                 <div class="col-md-4 px-5">

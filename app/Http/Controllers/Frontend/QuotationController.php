@@ -35,8 +35,6 @@ public function store(Request $request){
         $data = $request->all();
         $data['date'] = Carbon::createFromFormat('m/d/Y', $request->date)->format('Y-m-d');
         Quotation::create($data);
-
-
         $title = 'Welcome to the Quotation';
         $body = 'Quotation List';
         Mail::to('firojhasanonfo@gmail.com')->send(new WelcomeMail($title, $body, $date, $no_off_nights,  $no_off_adults, $no_off_kids, $interested_in, $name,$email, $phone_number, $description));

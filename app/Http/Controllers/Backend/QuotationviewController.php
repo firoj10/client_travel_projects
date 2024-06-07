@@ -9,8 +9,9 @@ use Illuminate\Http\Request;
 
 class QuotationviewController extends Controller
 {
-    public function index(QuotationDataTable $dataTable)
-    {
+        public function index(QuotationDataTable $dataTable){
         return $dataTable->render('admin.quotation.quotation');
+        
     }
+
 }

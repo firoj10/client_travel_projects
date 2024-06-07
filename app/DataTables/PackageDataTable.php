@@ -1,7 +1,6 @@
 <?php
 
 namespace App\DataTables;
-
 use App\Models\Package;
 use App\Models\Stay;
 use Yajra\DataTables\Html\Button;
@@ -62,7 +61,6 @@ class PackageDataTable extends DataTable
                     ->setTableId('package-table')
                     ->columns($this->getColumns())
                     ->minifiedAjax()
-                   
                     ->orderBy(1)
                     ->selectStyleSingle()
                     ->buttons([
@@ -74,20 +72,17 @@ class PackageDataTable extends DataTable
                         Button::make('reload')
                     ]);
     }
-
     /**
      * Get the dataTable columns definition.
      */
     public function getColumns(): array
     {
         return [
-         
             Column::make('id'),
             Column::make('name'),
             Column::make('city'),
             Column::make('address'),
             Column::make('thumbnail'),
-         
             Column::computed('action')
             ->exportable(false)
             ->printable(false)

@@ -1,15 +1,13 @@
 <?php
-
 use App\Http\Controllers\Backend\AdminController;
-
 use App\Http\Controllers\Backend\ProfileController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
-
-
 use App\Http\Controllers\Frontend\PageController;
 use App\Http\Controllers\Frontend\QuotationController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +26,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class, 'home'])->name('home');
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect('/admin/dashboard');
+    
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -36,10 +35,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
 require __DIR__.'/auth.php';
-
-
 Route::get('admin/login',[AdminController::class, 'login'])->name('admin.login');
 
 
@@ -63,10 +59,7 @@ Route::post('/submit-quotation', [QuotationController::class, 'store'])->name('q
 
 
 
-
-
-
-Route::get('/send-welcome-email', [EmailController::class, 'sendWelcomeEmail']);
+Route::post('/contact-email', [ContactController::class, 'store'])->name('contact.store');
 
 
 

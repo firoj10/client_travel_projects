@@ -20,8 +20,6 @@
             $gallerys = json_decode($experience->gallery_images_link);
             $thumbnail = $experience->thumbnail_image_link;
         @endphp
-
-
         @foreach ($gallerys as $gallery)
             <img width="100" height="100" src="{{ asset('gallery/' . $gallery) }}" alt="img">
         @endforeach

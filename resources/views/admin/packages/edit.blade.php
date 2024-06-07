@@ -1,9 +1,7 @@
 @extends('admin.layouts.master')
 @section('content')
     <div class="main-content">
-        {{-- <div class="d-flex justify-content-between">
-            <h3>package Form </h3>
-           <a  class="btn btn-primary" href="{{route('admin.package.index')}}">Back</a></div> --}}
+
         <section class="section">
             <div class="section-header">
                 <div class="col-12 col-md-10">

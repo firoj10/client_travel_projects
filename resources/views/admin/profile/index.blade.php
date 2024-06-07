@@ -11,7 +11,7 @@
             </div>
           </div>
           <div class="section-body">
-            <h2 class="section-title">Hi, Ujang!</h2>
+            <h2 class="section-title">Hi, </h2>
             <p class="section-lead">
               Change information about yourself on this page.
             </p>

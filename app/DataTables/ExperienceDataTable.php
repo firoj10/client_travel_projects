@@ -53,7 +53,6 @@ class ExperienceDataTable extends DataTable
     {
         return $model->newQuery();
     }
-
     /**
      * Optional method if you want to use the html builder.
      */
@@ -75,7 +74,6 @@ class ExperienceDataTable extends DataTable
                         Button::make('reload')
                     ]);
     }
-
     /**
      * Get the dataTable columns definition.
      */

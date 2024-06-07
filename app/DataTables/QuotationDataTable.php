@@ -15,6 +15,7 @@ use Yajra\DataTables\Html\Builder as HtmlBuilder;
 class QuotationDataTable extends DataTable
 {
     /**
+     * 
      * Build the DataTable class.
      *
      * @param QueryBuilder $query Results from query() method.
@@ -23,7 +24,7 @@ class QuotationDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             // ->addColumn('action', 'quotationdatatable.action')
-            ->rawColumns(['name', 'action'])
+            // ->rawColumns(['name'])
             ->setRowId('id');
     }
 
@@ -76,11 +77,11 @@ class QuotationDataTable extends DataTable
                 ->printable(false)
                 ->width(60)
                 ->addClass('text-center'),
-            Column::computed('action')
-                ->exportable(false)
-                ->printable(false)
-                ->width(60)
-                ->addClass('text-center'),
+            // Column::computed('action')
+            //     ->exportable(false)
+            //     ->printable(false)
+            //     ->width(60)
+            //     ->addClass('text-center'),
         ];
     }
 
