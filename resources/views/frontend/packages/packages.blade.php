@@ -184,6 +184,8 @@
     <!--.............................................Contact section-->
     
     @include('frontend.layouts.footer')
+    <script src="{{ asset('frontend/css/wow.min.js') }}"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

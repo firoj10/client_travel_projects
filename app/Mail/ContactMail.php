@@ -38,7 +38,7 @@ class ContactMail extends Mailable
         
     
         return new Content(
-            view: 'emails.welcome',
+            view: 'emails.contact',
             with: [
                 'title' => $this->title,
                 'body' => $this->body,

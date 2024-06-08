@@ -9,30 +9,35 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto gap-3 me-3">
-            <li class="nav-item">
+            <p class="nav-item">
                 <a href="{{route('home')}}" class="nav-link">Home</a>
                 </p>
-            <li class="nav-item">
+            <p class="nav-item">
                 <a href="{{route('resorts')}}" class="nav-link anchor_click_function" data-url=""
                     data-pagename="resorts">Resorts</a>
                 </p>
-            <li class="nav-item">
+            <p class="nav-item">
                 <a href="{{route('packages')}}" class="nav-link anchor_click_function" data-url=""
                     data-pagename="packages">Packages</a>
                 </p>
-            <li class="nav-item">
+            <p class="nav-item">
                 <a href="{{route('experience')}}" class="nav-link anchor_click_function" data-url=""
                     data-pagename="experience">Experience</a>
                 </p>
-            <li class="nav-item">
+            <p class="nav-item">
                 <a href="{{route('about')}}" class="nav-link anchor_click_function" data-url=""
                     data-pagename="about">About Us</a>
                 </p>
+            <p class="nav-item">
+                <a href="{{route('contact')}}" 
+                class="btn btn-secondary  contact_bt mb-lg-0 mb-md-0 mb-sm-2 mb-2 anchor_click_function"
+                data-pagename="contact">Contact Us</a>
+                </p>
         </ul>
-        <div class="nav-buttons ">
+        {{-- <div class="nav-buttons ">
             <a href="{{route('contact')}}" 
                 class="btn btn-secondary  contact_bt mb-lg-0 mb-md-0 mb-sm-2 mb-2 anchor_click_function"
                 data-pagename="contact">Contact Us</a>
-        </div>
+        </div> --}}
     </div>
 </nav>

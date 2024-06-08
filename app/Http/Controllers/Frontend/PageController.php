@@ -54,4 +54,22 @@ class PageController extends Controller
      public function contact(){
         return view('frontend.contact.contact');
      }
+
+
+     
+     public function privacypolicy(){
+        return view('frontend.privacypolicy.privacypolicy');
+     }
+     public function termsconditions(){
+        return view('frontend.termsconditions.termsconditions');
+     }
+     public function disclaimer(){
+        return view('frontend.disclaimer.disclaimer');
+     }
+     public function support(){
+        return view('frontend.support.support');
+     }
+     public function faq(){
+        return view('frontend.faq.faq');
+     }
 }

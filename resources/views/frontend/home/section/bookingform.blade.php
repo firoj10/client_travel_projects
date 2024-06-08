@@ -50,7 +50,6 @@
                 <img src="{{ asset('frontend/img/form/user.png') }}" alt="User"
                     class="img-fluid">
                 <input type="text" placeholder="Your Name*" name="name">
-
             </div>
         </div>
 

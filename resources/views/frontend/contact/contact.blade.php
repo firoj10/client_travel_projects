@@ -99,7 +99,7 @@
             <h4 class="fw-semibold mb-2">Get in Touch With Us</h4>
             <div class="row px-3">
                 <div class="col-md-4">
-                    <form class="contact_submit" action="{{ route('contact.store') }}" method="POST" >
+                    <form class="contact_submit" action="/contact-email" method="POST" >
                         @csrf
                         <div class="row justify-content-between">
                             <div class="col-6 p-0 input">

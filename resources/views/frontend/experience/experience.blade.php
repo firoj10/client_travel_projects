@@ -12,7 +12,7 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ asset('frontend//css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/animate.min.css') }}">
     <style>
         .swiper2 {
             width: 100%;
@@ -163,6 +163,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
+    <script src="{{ asset('frontend/css/wow.min.js') }}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./css/wow.min.js"></script>

@@ -3,14 +3,21 @@
 ::before {
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 
 }
+
 :root {
-    --primary-color: #E89E25;
-    --secondary-color: #2F3991;
-    --dark-blue-color: #2F3991;
+    --primary-color: #352f44;
+    /* --primary-color: #E89E25; */
+    /* --secondary-color: black;
+    --dark-blue-color: black; */
+    --secondary-color: #352f44;
+    --dark-blue-color: #352f44;
+    /* --secondary-color: #2F3991;
+    --dark-blue-color: #2F3991; */
     --black-color: #000;
     --white-color: #fff;
     --current-image-height: 400px;
@@ -29,11 +36,13 @@ body{
 a {
     text-decoration: none !important;
 }
+
 .svg-inline--fa {
     width: 20px;
     height: 20px;
 
 }
+
 .navbar {
     padding: 1rem 3rem !important;
     background: rgba(255, 255, 255, 0.50);
@@ -137,7 +146,7 @@ a {
 }
 
 .header-form .form-header {
-    background-color: #2F3991;
+    background-color: var(--primary-color);
     border-top-right-radius: 1.5rem;
     border-top-left-radius: 1.5rem;
 }
@@ -240,8 +249,9 @@ select {
 }
 
 .pricing .container-fluid {
-    padding: 1rem 3rem;
+    padding: 10px 3rem;
     background: linear-gradient(269deg, rgba(232, 158, 37, 0.70) 30.5%, rgba(83, 147, 209, 0.70) 99.87%);
+    /* background-color: var(--secondary-color); */
 }
 
 .home_photos_section img.first_image {
@@ -330,6 +340,8 @@ select {
 }
 
 .joint_news {
+    padding-left: 20px;
+    padding-right: 20px;
     background-color: var(--dark-blue-color);
 }
 
@@ -338,12 +350,36 @@ select {
     width: 90%;
 }
 
+
+
 .joint_news .input input {
     outline: none;
     border: none;
     padding-left: 1rem;
     width: 65%;
 }
+
+@media (max-width:600px) {
+    .joint_news .input {
+        background: #fff;
+        width: 100%;
+    }
+
+    .joint_news .input input {
+        outline: none;
+        border: none;
+        padding-left: 1rem;
+        width: 70%;
+    }
+
+    .joint_news {
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: var(--dark-blue-color);
+    }
+}
+
+
 
 li {
     list-style: none;
@@ -478,14 +514,17 @@ li {
     border: none;
     font-size: 16px;
 }
+
 .tailor-made .row .package-detail span:nth-child(1) {
     background-color: var(--primary-color);
     padding: 0.2rem;
 }
+
 .tailor-made .package-detail {
     top: 10px;
     font-size: 14px;
 }
+
 .tailor-made .row .card-body {
     box-shadow: 0px 4.37723px 4.37723px 1.09431px rgba(0, 0, 0, 0.25);
     box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2), 0 5px 15px 0 rgba(37, 44, 97, 0.15);
@@ -493,6 +532,7 @@ li {
     color: #000;
     cursor: pointer;
 }
+
 /* //about-page */
 .about-banner {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(../img/banner.png);
@@ -505,6 +545,7 @@ li {
     align-items: center;
     justify-content: center;
 }
+
 .resort-tabs .container-fluid {
     background: rgba(83, 147, 209, 0.30);
     box-shadow: 0px 4px 16px rgba(254, 205, 211, 0.1), 0px 8px 24px rgba(254, 205, 211, 0.1), 0px 16px 56px rgba(254, 205, 211, 0.1);
@@ -514,9 +555,11 @@ li {
     display: flex;
     /* justify-content: space-between; */
 }
+
 .content input {
     display: none;
 }
+
 .content .list {
     display: flex;
     flex-direction: column;
@@ -524,7 +567,11 @@ li {
     width: 20%;
     margin-right: 50px;
 }
-#overview:checked~.list label.overview, #accomodation:checked~.list label.accomodation, #Spa-Wellness:checked~.list label.Spa-Wellness, #activities-facilities:checked~.list label.activities-facilities {
+
+#overview:checked~.list label.overview,
+#accomodation:checked~.list label.accomodation,
+#Spa-Wellness:checked~.list label.Spa-Wellness,
+#activities-facilities:checked~.list label.activities-facilities {
     color: var(--white-color);
     background-color: var(--primary-color);
 }
@@ -542,25 +589,32 @@ li {
     transition: all 0.5s ease;
     z-index: 10;
 }
+
 label {
     display: inline-block;
-}.content .text-content {
+}
+
+.content .text-content {
     width: 80%;
     height: 100%;
     color: var(--black-color);
 }
-.new-resort{
+
+.new-resort {
     display: block !important;
 }
+
 @media (max-width:600px) {
-    .new-resort{
+    .new-resort {
         display: inline !important;
     }
+
     .header-form .form-body .input input {
         width: 100%;
         margin-left: 2px;
         font-size: 12px;
     }
+
     .navbar-collapse {
         background-color: #2F3991 !important;
         z-index: 999;
@@ -568,6 +622,7 @@ label {
         color: #fff;
         padding: 0px !important;
     }
+
     .navbar-nav .nav-link {
         font-weight: 600 !important;
         color: #fff !important;
@@ -641,15 +696,18 @@ label {
     .header-content {
         height: 612px;
     }
-    .island_resort{
+
+    .island_resort {
         padding-top: 35px !important;
     }
-    .new_slide img{
+
+    .new_slide img {
         height: 40px !important;
-        }
-        .nights-package{
-            text-align: center !important;
-        }
+    }
+
+    .nights-package {
+        text-align: center !important;
+    }
 
 }
 
@@ -660,11 +718,13 @@ label {
         padding-left: 20px;
         padding-top: 10px;
     }
+
     .header-form .form-body .input input {
         width: 100%;
         margin-left: 2px;
         font-size: 12px;
     }
+
     .navbar-collapse {
         background-color: #2F3991 !important;
         z-index: 999;

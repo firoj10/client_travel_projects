@@ -27,7 +27,7 @@ public function store(Request $request){
         $body = 'Quotation List';
         Mail::to('firojhasanonfo@gmail.com')->send(new ContactMail($title, $body, $frist_name, $last_name,$email, $phone_number, $message));
 
-        
+        // dd($message);
 
     return redirect()->back()->with('success', 'Quotation submitted successfully.');
 }
