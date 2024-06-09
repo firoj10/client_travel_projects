@@ -17,7 +17,7 @@
                 <div class="card-body">
                     <div class="text-center">
                         <div class="rating-star py-2">
-                            <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
+                            <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
                                 class="img-fluid">
                         </div>
                         <h5 class="black-color fw-bold my-1">{{$stay->name}}</h5>

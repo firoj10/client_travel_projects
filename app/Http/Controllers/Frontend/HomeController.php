@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function home(){
+        $guest_house = Stay::where('stay_type', 'guest_house')->get();
+
         $stays = Stay::where('stay_type', 'resort')->get();
         $experiences = Experience::all();
         $packages = Package::all();
@@ -17,10 +19,13 @@ class HomeController extends Controller
         compact(
             'stays',
             'experiences',
-            'packages'
+            'packages',
+            'guest_house'
         )
     );
     }
+
+   
     public function resortdetails($id){
         $mainresorts = Stay::where('stay_type', 'resort')->get();
         $stays = Stay::findOrFail($id);

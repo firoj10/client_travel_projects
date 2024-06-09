@@ -2,13 +2,13 @@
     <a href="{{route('home')}}" class="navbar-brand">
         <img src="{{ asset('frontend/img/11.png') }}" alt="logo">
     </a>
-    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+    <button class="navbar-toggler ms-auto mx-2" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto gap-3 me-3">
+        <ul class="navbar-nav ms-auto ">
             <p class="nav-item">
                 <a href="{{route('home')}}" class="nav-link">Home</a>
                 </p>

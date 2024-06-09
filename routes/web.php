@@ -55,11 +55,11 @@ Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 
 
-Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
-Route::get('/termsconditions', [PageController::class, 'termsconditions'])->name('termsconditions');
-Route::get('/disclaimer', [PageController::class, 'disclaimer'])->name('disclaimer');
-Route::get('/support', [PageController::class, 'support'])->name('support');
-Route::get('/faq', [PageController::class, 'faq'])->name('faq');
+Route::get('/privacy', [PageController::class, 'privacypage'])->name('privacypage');
+Route::get('/termpage', [PageController::class, 'termpage'])->name('termpage');
+Route::get('/disclaimer', [PageController::class, 'disclaimerpage'])->name('disclaimerpage');
+Route::get('/support', [PageController::class, 'supportpage'])->name('supportpage');
+Route::get('/faq', [PageController::class, 'faqpage'])->name('faqpage');
 
 
 //Quotation

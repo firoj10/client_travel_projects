@@ -1,7 +1,7 @@
 <section>
 <div class="nav-top">
-    <div class="d-lg-flex d-md-flex d-sm-block justify-content-between">
-        <div class="d-lg-flex  d-md-flex d-sm-block align-items-center">
+    <div class="d-lg-flex d-md-flex d-sm-block justify-content-between text-cnt">
+        <div class="d-lg-flex  d-md-flex d-sm-block align-items-center text-cnt">
             <div class="fab_icons_div">
                 <svg class="svg-inline--fa fa-phone " aria-hidden="true" focusable="false" data-prefix="fas"
                     data-icon="phone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
@@ -22,7 +22,7 @@
                     </path>
                 </svg><!-- <i class="fa-regular fa-envelope "></i> Font Awesome fontawesome.com -->
                 <span> <a href=""
-                        class="text-white">travel@gmail.com</a></span>
+                        class="text-white">demo@gmail.com</a></span>
             </div>
             <div class="fab_icons_div">
                 <svg class="svg-inline--fa fa-location-dot " aria-hidden="true" focusable="false"
@@ -32,7 +32,7 @@
                         d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
                     </path>
                 </svg><!-- <i class="fa-solid fa-location-dot "></i> Font Awesome fontawesome.com -->
-                <span>285 Rd 4 W, Dhaka, TravonSoft</span>
+                <span>285 Rd 4 W, Dhaka, Demo</span>
             </div>
         </div>
         <div class="d-lg-flex fab_icons_div  d-md-flex d-lg-block d-md-block d-sm-none d-none">

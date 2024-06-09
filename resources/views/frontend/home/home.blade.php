@@ -134,9 +134,58 @@
 
 </div>
   @endforeach
-            
-          
+        </div>
+    </div>
+</section>
+<!--.............................................guest house Holidays Packages -->
 
+<section class="tailor-made py-5 overflow-hidden">
+    <div class="container-fluid wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
+        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+        <div class="tailor-heading text-center">
+            <h2 class="black-color fw-bold">
+                Tailor-Made Holidays <span class="primary-color">Guest House</span> </h2>
+            <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
+        </div>
+        <div class="row  my-5 packages_home">
+  
+  @foreach ($guest_house as $stay)
+  <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3  ">
+   <a href="{{route('resortdetails', $stay->id )}}" class="anchor_click_function" data-pagename="resort-details">
+       <div class="card-header overflow-hidden ">
+           <img src="{{$stay->thumbnail_image_link}}" alt="resort" class="img-fluid">
+       </div>
+       <div class="card-body">
+           <div class="text-center">
+               <div class="rating-star py-2">
+                   <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
+                       class="img-fluid">
+               </div>
+               <h5 class="black-color fw-bold my-1">{{$stay->name}}</h5>
+               <svg class="svg-inline--fa fa-location-dot " aria-hidden="true" focusable="false"
+                   data-prefix="fas" data-icon="location-dot" role="img"
+                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
+                   <path fill="currentColor"
+                       d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
+                   </path>
+               </svg>
+               <span>{{$stay->address}}</span>
+           </div>
+           <div class="card-list  py-2">
+               <ul class="bullets_list_resort">
+                  @php
+                  $descriptions =  json_decode($stay->short_description); @endphp 
+                      @foreach($descriptions as $description)
+
+                      <p class="mb-0"><i class="fa fa-check-square-o px-2"></i>{{$description}} </p>
+
+                      @endforeach
+               </ul>
+           </div>
+       </div>
+   </a>
+</div>
+  @endforeach
         </div>
    
     </div>

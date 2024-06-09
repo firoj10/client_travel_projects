@@ -85,15 +85,15 @@
     <section class="header_nav container-fluid px-0">
         @include('frontend.layouts.header')
     </section>
-    <section class="about-banner"
-        style="background-image: url('https://holidayslinkmaldives.com/public/uploads/banner_about.jpeg')">
+    <section class="about-banner" style="background-image: url('{{asset('frontend/img/about/about1.png')}}')">
+
         <div class="container-fluid">
             <div class="about-content text-center">
                 <h1 class="white-color fw-bold fs-1">Contact <span class="primary-color">US </span></h1>
             </div>
         </div>
     </section>
-    <section class="form py-5 wow fadeInUp" data-wow-delay="0.1s"
+    <section class="form py-5 wow fadeInUp" data-wow-delay="0.1s
         style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
         <div class="container">
             <h4 class="fw-semibold mb-2">Get in Touch With Us</h4>
@@ -176,12 +176,8 @@
                                 <p class="m-0 mt-2">+01757075968</p>
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
-
                 <div class="tour-map col-md-4 ">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14600.557896497136!2d90.4116388!3d23.8136389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c6ff73f897cb%3A0xe181020d2df0aaaf!2sTravonSoft!5e0!3m2!1sen!2sbd!4v1717901270762!5m2!1sen!2sbd"

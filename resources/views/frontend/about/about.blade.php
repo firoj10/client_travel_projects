@@ -69,8 +69,7 @@
     </section> 
     
     
-    <section class="about-banner"
-        style="background-image: url('https://holidayslinkmaldives.com/public/uploads/banner_about.jpeg')">
+    <section class="about-banner" style="background-image: url('{{asset('frontend/img/about/about2.png')}}')">
         <div class="container-fluid">
             <div class="about-content text-center">
                 <h1 class="white-color fw-bold fs-1">About <span class="primary-color">US </span></h1>
@@ -135,7 +134,7 @@
             <div class="row">
                 <div class="col-lg-7">
                     <h2>COMPANY'S PROFILE</h2>
-                    <p class="mt-2">Holidays Link Maldives was established in 2018 as a local Destination Management
+                    <p class="mt-2">Demo was established in 2018 as a local Destination Management
                         Company with the
                         strong ties to South Asian travel community and with an aim to broaden our services globally.
                         Our vision and focus are serving the travelers around the world with our knowledge, expertise
@@ -159,7 +158,7 @@
             <div class="row my-5 flex-row-reverse">
                 <div class="col-lg-7">
                     <h2>COMPANY'S PROFILE</h2>
-                    <p class="mt-2">Holidays Link Maldives was established in 2018 as a local Destination Management
+                    <p class="mt-2">Demo was established in 2018 as a local Destination Management
                         Company with the
                         strong ties to South Asian travel community and with an aim to broaden our services globally.
                         Our vision and focus are serving the travelers around the world with our knowledge, expertise
@@ -175,8 +174,8 @@
                         specialists of Maldives.</p>
                 </div>
                 <div class="col-lg-5">
-                    <img src="https://holidayslinkmaldives.com/public/uploads/baner_image_about2.jpg" alt=""
-                        width="100%" height="100%">
+                    <img src="{{asset('frontend/img/about/about1.png')}}" alt="" class=""
+                    width="100%" height="100%">
 
                 </div>
             </div>

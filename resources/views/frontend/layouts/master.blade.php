@@ -132,7 +132,7 @@
                                     class="primary-color">"Tropical
                                     Paradise"</span></h1>
                             <p class="black-color mb-4"></p>
-                            <a href="https://holidayslinkmaldives.com/" class="btn btn-secondary  px-5">Explore</a>
+                            <a href="{{ route('experience') }}" class="btn btn-secondary  px-5">Explore</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-8 col-lg-7 col-xl-4  d-flex flex-column justify-content-center wow fadeInRight"

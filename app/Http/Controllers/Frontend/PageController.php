@@ -57,19 +57,19 @@ class PageController extends Controller
 
 
      
-     public function privacypolicy(){
+     public function privacypage(){
         return view('frontend.privacypolicy.privacypolicy');
      }
-     public function termsconditions(){
+     public function termpage(){
         return view('frontend.termsconditions.termsconditions');
      }
-     public function disclaimer(){
+     public function disclaimerpage(){
         return view('frontend.disclaimer.disclaimer');
      }
-     public function support(){
+     public function supportpage(){
         return view('frontend.support.support');
      }
-     public function faq(){
+     public function faqpage(){
         return view('frontend.faq.faq');
      }
 }

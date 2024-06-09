@@ -599,7 +599,9 @@ label {
     height: 100%;
     color: var(--black-color);
 }
-
+.text-cnt{
+    text-align: left !important;
+}
 .new-resort {
     display: block !important;
 }
@@ -608,7 +610,17 @@ label {
     .new-resort {
         display: inline !important;
     }
-
+    .text-cnt{
+        text-align: center !important;
+     
+        align-items: center !important;
+    }
+    .cnt-padding{
+        padding-left: 30px;
+    }
+    .cnt-padding-ppp{
+        padding-left: 80px;
+    }
     .header-form .form-body .input input {
         width: 100%;
         margin-left: 2px;
@@ -616,7 +628,7 @@ label {
     }
 
     .navbar-collapse {
-        background-color: #2F3991 !important;
+        /* background-color: #2F3991 !important; */
         z-index: 999;
         border-radius: 10px;
         color: #fff;
@@ -781,7 +793,7 @@ label {
     }
 
     .navbar {
-        padding: 0rem 2rem !important;
+        padding: 0rem 0rem !important;
         height: 66px !important;
     }
 

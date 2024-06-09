@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <title>Packages</title>
@@ -13,6 +14,7 @@
         .position-relatives {
             position: relative;
         }
+
         .package-details {
             background-color: var(--primary-color) !important;
             padding: 2px 5px;
@@ -88,7 +90,7 @@
 <body>
     <!-- topbar start-->
     <section>
-       @include('frontend.layouts.topbar')
+        @include('frontend.layouts.topbar')
     </section>
     <!-- navbar ...................start.-->
     @include('frontend.layouts.header')
@@ -96,34 +98,28 @@
     <div class="container-fluid mt-5">
         <div class="row">
             <div class="col-md-8">
-                <div class="share">
-                    <span class="black-color fw-semibold">Share on</span>
-                    <img src="https://holidayslinkmaldives.com/assets/img/share.png" alt="fb"
-                        class="img-fluid ms-3 me-3">
+                <div class="social-icons icons_links ms-4">
                     <a href="" target="_blank" aria-label="Facebook"><img
-                            src="https://holidayslinkmaldives.com/assets/img/fb.png" alt="fb"
-                            class="img-fluid"></a>
+                            src="{{ asset('frontend/img/topicon/fb.png') }}" alt="fb" class="img-fluid"></a>
                     <a href="" target="_blank" aria-label="YouTube"><img
-                            src="https://holidayslinkmaldives.com/assets/img/yt.png" alt="fb"
-                            class="img-fluid"></a>
+                            src="{{ asset('frontend/img/topicon/yt.png') }}" alt="fb" class="img-fluid"></a>
                     <a href="" target="_blank" aria-label="Instagram"><img
-                            src="https://holidayslinkmaldives.com/assets/img/inst.png" alt="fb"
-                            class="img-fluid"></a>
+                            src="{{ asset('frontend/img/topicon/inst.png') }}" alt="fb" class="img-fluid"></a>
                     <a href="" target="_blank" aria-label="WhatsApp"><img
-                            src="https://holidayslinkmaldives.com/assets/img/whatsapp.png" alt="fb"
-                            class="img-fluid"></a>
+                            src="{{ asset('frontend/img/topicon/whatsapp.png') }}" alt="fb" class="img-fluid"></a>
                     <a href="" target="_blank" aria-label="Tiktok"><img
-                            src="https://holidayslinkmaldives.com/assets/img/Tiktok.png" alt="fb"
+                            src="{{ asset('frontend/img/topicon/header-icon-tiktok.png') }}" alt="fb"
                             class="img-fluid"></a>
+
+
                 </div>
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                    class="swiper mySwiper2">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                     <div class="swiper-wrapper">
                         @php
                         $gallerys = json_decode($packagesdetails->gallery_images_link); @endphp
                         @foreach ($gallerys as $gallery)
                             <div class="swiper-slide">
-                          
+
                                 <img src="{{ asset('gallery/' . $gallery) }}" />
 
                             </div>
@@ -147,10 +143,10 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <h2 class="black-color island_resort">{{$packagesdetails->name}}</h2>
+                <h2 class="black-color island_resort">{{ $packagesdetails->name }}</h2>
                 <div class="rating-star">
-                    <img src="https://holidayslinkmaldives.com/assets/img/4-star.png" alt="star"
-                        class="img-fluid">
+                    <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
+                                class="img-fluid">
                 </div>
                 <div class="location mb-4">
                     <svg class="svg-inline--fa fa-location-dot" aria-hidden="true" style="color: #E50027;"
@@ -160,7 +156,7 @@
                             d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
                         </path>
                     </svg>
-                    <span class="ms-2">{{$packagesdetails->address}}</span>
+                    <span class="ms-2">{{ $packagesdetails->address }}</span>
                 </div>
                 <div class="header-form px-0">
                     <div class="form-header text-center py-1">
@@ -172,81 +168,82 @@
 
             </div>
         </div>
-    </div> 
- </section>
+    </div>
+    </section>
 
-<!--.............................................Have a Glance on Resorts -->
-<section class="resort py-5 overflow-hidden">
-    <div class="container-fluid wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
-        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-        <div class="resort-heading text-center">
-            <h2 class="black-color fw-bold">
-                Tailor-Made Holidays <span class="primary-color">Packages </span>
-            </h2>
-            <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
-        </div>
-        <div class="row  my-4">
+    <!--.............................................Have a Glance on Resorts -->
+    <section class="resort py-5 overflow-hidden">
+        <div class="container-fluid wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
+            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+            <div class="resort-heading text-center">
+                <h2 class="black-color fw-bold">
+                    Tailor-Made Holidays <span class="primary-color">Packages </span>
+                </h2>
+                <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
+            </div>
+            <div class="row  my-4">
 
-            @foreach ($packages as $package)
-                <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3">
-                    <div class="position-relatives">
-                        <a href="{{ route('packagesdetails', ['name' => $package->name, 'id' => $package->id]) }}"
-                            class="anchor_click_function" data-pagename="resort-details">
-                            <div class="card-header overflow-hidden ">
-                                <img src="{{ asset($package->thumbnail_image_link) }}" alt="resort"
-                                    class="img-fluid">
-                            </div>
-                            <div class="card-body">
-                                <div class="text-center">
-                                    <div class="rating-star py-2">
-                                        <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
-                                            class="img-fluid">
-                                    </div>
-                                    <h5 class="black-color fw-bold my-1">{{ $package->name }}</h5>
-                                    <svg style="color: black" class="svg-inline--fa fa-location-dot "
-                                        aria-hidden="true" focusable="false" data-prefix="fas"
-                                        data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 384 512" data-fa-i2svg="">
-                                        <path fill="currentColor"
-                                            d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                        </path>
-                                    </svg>
-                                    <span style="color: black">{{ $package->address }}</span>
+                @foreach ($packages as $package)
+                    <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3">
+                        <div class="position-relatives">
+                            <a href="{{ route('packagesdetails', ['name' => $package->name, 'id' => $package->id]) }}"
+                                class="anchor_click_function" data-pagename="resort-details">
+                                <div class="card-header overflow-hidden ">
+                                    <img src="{{ asset($package->thumbnail_image_link) }}" alt="resort"
+                                        class="img-fluid">
                                 </div>
-                                <div class="card-list  py-2">
-                                    <ul class="bullets_list_resort">
-                                        @php
-                                            $descriptions = json_decode($package->short_description);
-                                        @endphp
-                                        @foreach ($descriptions as $description)
-                                            <li></li>
-                                            <p class="mb-0" style="color: black"><i
-                                                    class="fa fa-check-square-o px-2"></i>
-                                                {{ $description }}<br></p>
-                                        @endforeach
-                                    </ul>
-                                    <div class="text-center"><a href=""
-                                        class="btn btn-primary anchor_click_function" data-url=""
-                                        data-pagename="package-details">More Details</a>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <div class="rating-star py-2">
+                                            <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
+                                                class="img-fluid">
+                                        </div>
+                                        <h5 class="black-color fw-bold my-1">{{ $package->name }}</h5>
+                                        <svg style="color: black" class="svg-inline--fa fa-location-dot "
+                                            aria-hidden="true" focusable="false" data-prefix="fas"
+                                            data-icon="location-dot" role="img"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                                            data-fa-i2svg="">
+                                            <path fill="currentColor"
+                                                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
+                                            </path>
+                                        </svg>
+                                        <span style="color: black">{{ $package->address }}</span>
                                     </div>
-                                </div>
-                                
-                            </div>
-                        </a>
-                        <div class="package-details ">
-                            <span class="white-color me-2">04 Nights Package</span>
+                                    <div class="card-list  py-2">
+                                        <ul class="bullets_list_resort">
+                                            @php
+                                                $descriptions = json_decode($package->short_description);
+                                            @endphp
+                                            @foreach ($descriptions as $description)
+                                                <li></li>
+                                                <p class="mb-0" style="color: black"><i
+                                                        class="fa fa-check-square-o px-2"></i>
+                                                    {{ $description }}<br></p>
+                                            @endforeach
+                                        </ul>
+                                        <div class="text-center"><a href=""
+                                                class="btn btn-primary anchor_click_function" data-url=""
+                                                data-pagename="package-details">More Details</a>
+                                        </div>
+                                    </div>
 
+                                </div>
+                            </a>
+                            <div class="package-details ">
+                                <span class="white-color me-2">04 Nights Package</span>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-            @endforeach
-            
-        </div>
-    </div>
-</section>
+                @endforeach
 
-<!--.............................................Newsletter-->
-<section class="joint_news px-5 py-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
+            </div>
+        </div>
+    </section>
+
+    <!--.............................................Newsletter-->
+    <section class="joint_news px-5 py-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
         <div class="container-fluid">
             <div class="row">
@@ -312,4 +309,5 @@
 
 
 </body>
+
 </html>

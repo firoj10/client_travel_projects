@@ -6,66 +6,88 @@
         <h1>Dashboard</h1>
       </div>
       <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
           <div class="card card-statistic-1">
             <div class="card-icon bg-primary">
-              <i class="far fa-user"></i>
+              <i class="far fa-star"></i>
             </div>
             <div class="card-wrap">
               <div class="card-header">
-                <h4>Total Admin</h4>
+                <h4>Total Stay</h4>
               </div>
               <div class="card-body">
-                10
+                {{$stay_count}}
+                {{-- 'guest_house_count',
+                'resort_count',
+                'experiences_count',
+                'packages_count',
+                'stay_count',
+                --}}
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+          <div class="card card-statistic-1">
+            <div class="card-icon bg-success">
+              <i class="fas fa-history"></i>
+            </div>
+            <div class="card-wrap">
+              <div class="card-header">
+                <h4>Packages</h4>
+              </div>
+              <div class="card-body">
+               {{$packages_count}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
           <div class="card card-statistic-1">
             <div class="card-icon bg-danger">
               <i class="far fa-newspaper"></i>
             </div>
             <div class="card-wrap">
               <div class="card-header">
-                <h4>News</h4>
+                <h4>Guest House</h4>
               </div>
               <div class="card-body">
-                42
+                {{$guest_house_count}}
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
           <div class="card card-statistic-1">
             <div class="card-icon bg-warning">
               <i class="far fa-file"></i>
             </div>
             <div class="card-wrap">
               <div class="card-header">
-                <h4>Reports</h4>
+                <h4>Resorts</h4>
               </div>
               <div class="card-body">
-                1,201
+                {{$resort_count}}
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="col-lg-2 col-md-6 col-sm-6 col-12">
           <div class="card card-statistic-1">
             <div class="card-icon bg-success">
               <i class="fas fa-circle"></i>
             </div>
             <div class="card-wrap">
               <div class="card-header">
-                <h4>Online Users</h4>
+                <h4>Experiences</h4>
               </div>
               <div class="card-body">
-                47
+               {{$experiences_count}}
               </div>
             </div>
           </div>
         </div>                  
+                         
       </div>
    
     </section>
