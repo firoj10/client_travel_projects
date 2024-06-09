@@ -14,6 +14,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('frontend/css/animate.min.css') }}">
     <style>
+  .container {
+    position: relative; /* Ensure this is the parent of the positioned element */
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: calc(100% - 48px); /* Adjust width to fit container, considering left positioning */
+}
         .swiper2 {
             width: 100%;
             height: 100%;
@@ -57,11 +69,10 @@
         @include('frontend.layouts.header')
 
     </section>
-    <section class="about-banner"
-        style="background-image: url('{{asset("frontend/img/banner_experience.png")}}')">
+    <section class="about-banner" style="background-image: url('{{ asset('frontend/img/banner_experience.png') }}')">
         <div class="container-fluid">
             <div class="about-content text-center">
-                <h1 class="white-color fw-bold fs-1">Experience  <span class="primary-color">Resorts</span>
+                <h1 class="white-color fw-bold fs-1">Experience <span class="primary-color">Resorts</span>
                 </h1>
                 <p><span class="fw-semibold  white-color">Find the best & the reliable resorts to get an unforgettable
                         holiday experience in the tropical paradise of the Maldives.</span>
@@ -84,25 +95,26 @@
         </div>
         <div class="mb-4">
             <div class="row px-5">
-              @foreach ($experiences as $experience)
-            
-              <div class=" col-12 col-md-4 col-lg-3 ">
-                <a href="{{route('experiencedetails', ['name'=>$experience->title, 'id'=>$experience->id ])}}">
-                <div class=" exp-card  position-relative my-2"
-                    style="background-image: url('{{$experience->thumbnail_image_link}}');">
-                    <div class=" position-absolute" style=" top:70%; left: 7%;">
-                        <div class=" text-center px-4">
-                            <h2 class="expreance-title ">{{$experience->title}}</h2>
-                            <p class="expreance-content ">{{$experience->sub_title}}
-                            </p>
-                        </div>
-                    </div>
+                @foreach ($experiences as $experience)
+                    <div class=" col-12 col-md-4 col-lg-3 ">
+                        <a
+                            href="{{ route('experiencedetails', ['name' => $experience->title, 'id' => $experience->id]) }}">
+                            <div class=" exp-card text-center position-relative my-2"
+                                style="background-image: url('{{ $experience->thumbnail_image_link }}');">
+                                <div class="container position-relative">
+                                    <div class="position-absolute centered-content" style="top: 70%; left: 24px; transform: translateY(-50%);">
+                                        <div class="text-content">
+                                            <h2 class="experience-title">{{ $experience->title }}</h2>
+                                            <p class="experience-content">{{ $experience->sub_title }}</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                </div>
-            </a>
-            </div>
-              @endforeach
-            
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
+
 
 
             </div>

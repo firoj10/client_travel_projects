@@ -142,7 +142,7 @@
                             <div class="form-header text-center py-1">
                                 <h5 class="white-color text-uppercase fw-bold fs-6 py-1">Request a Quote</h5>
                             </div>
-                            @include('frontend.home.section.bookingform');
+                            @include('frontend.home.section.bookingform')
                         </div>
                     </div>
                 </div>

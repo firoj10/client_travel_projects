@@ -606,6 +606,11 @@ label {
     display: block !important;
 }
 
+/* @media (max-width:420px) {
+    .cnt-padding-ppp{
+        padding-left: 210px;
+    }
+} */
 @media (max-width:600px) {
     .new-resort {
         display: inline !important;
@@ -616,7 +621,7 @@ label {
         align-items: center !important;
     }
     .cnt-padding{
-        padding-left: 30px;
+        padding-left: 40px;
     }
     .cnt-padding-ppp{
         padding-left: 80px;

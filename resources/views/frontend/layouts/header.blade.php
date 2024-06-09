@@ -8,7 +8,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto ">
+        <ul class="navbar-nav ms-auto text-center">
             <p class="nav-item">
                 <a href="{{route('home')}}" class="nav-link">Home</a>
                 </p>
@@ -28,9 +28,9 @@
                 <a href="{{route('about')}}" class="nav-link anchor_click_function" data-url=""
                     data-pagename="about">About Us</a>
                 </p>
-            <p class="nav-item">
+            <p class="nav-item" style="margin-left: 20px">
                 <a href="{{route('contact')}}" 
-                class="btn btn-secondary  contact_bt mb-lg-0 mb-md-0 mb-sm-2 mb-2 anchor_click_function"
+                class="btn btn-secondary  contact_bt anchor_click_function"
                 data-pagename="contact">Contact Us</a>
                 </p>
         </ul>
