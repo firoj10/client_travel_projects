@@ -143,7 +143,7 @@
                                 <span class="fw-bold">Address</span>
                             </div>
                             <div class="ps-4">
-                                <p class="m-0 mt-2">R 16-06, Hithigas Magu Golhi 5, Hulhumale, Maldives </p>
+                                <p class="m-0 mt-2">R 16-06, Hithigas demo 5,demo </p>
                             </div>
                         </div>
                         <div class="col mt-2">
@@ -158,7 +158,7 @@
                                 <span class="fw-bold">Email Address</span>
                             </div>
                             <div class="ps-4">
-                                <p class="m-0 mt-2">info@holidayslinkmaldives.com</p>
+                                <p class="m-0 mt-2">demo@gmail.com</p>
                             </div>
                         </div>
                         <div class="col mt-2">
@@ -173,7 +173,7 @@
                                 <span class="fw-bold">Contact</span>
                             </div>
                             <div class="ps-4">
-                                <p class="m-0 mt-2">+960-9506464</p>
+                                <p class="m-0 mt-2">+01757075968</p>
                             </div>
                         </div>
 
@@ -184,12 +184,11 @@
 
                 <div class="tour-map col-md-4 ">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.0120955559487!2d73.54039167383448!3d4.217898645656186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b3f7f950953135d%3A0xe83b162b1d062446!2sHolidays%20Link%20Maldives!5e0!3m2!1sen!2s!4v1696941577995!5m2!1sen!2s"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14600.557896497136!2d90.4116388!3d23.8136389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c6ff73f897cb%3A0xe181020d2df0aaaf!2sTravonSoft!5e0!3m2!1sen!2sbd!4v1717901270762!5m2!1sen!2sbd"
                         width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-
 
 
         </div>

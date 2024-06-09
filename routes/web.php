@@ -55,7 +55,7 @@ Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 
 
 
-Route::get('/privacypolicy', [PageController::class, 'privacy'])->name('privacypolicy');
+Route::get('/privacy', [PageController::class, 'privacy'])->name('privacy');
 Route::get('/termsconditions', [PageController::class, 'termsconditions'])->name('termsconditions');
 Route::get('/disclaimer', [PageController::class, 'disclaimer'])->name('disclaimer');
 Route::get('/support', [PageController::class, 'support'])->name('support');
