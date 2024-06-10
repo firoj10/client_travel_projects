@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -160,9 +161,9 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
     <script>
-    $( function() {
-      $( "#datepicker" ).datepicker();
-    } );
+        $(function() {
+            $("#datepicker").datepicker();
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
@@ -180,6 +181,8 @@
             },
             mousewheel: true,
             keyboard: true,
+          
+           
         });
     </script>
     <script>
@@ -190,6 +193,7 @@
                 disableOnInteraction: false,
             },
             loop: true,
+           
             breakpoints: {
                 640: {
                     slidesPerView: 2,

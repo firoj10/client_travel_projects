@@ -9,8 +9,8 @@
                             company. We are helping our
                             customers to
                             get tailored made packages globally</p>
-                        <div class="d-flex align-items-center   ">
-                            <div class="text-cnt cnt-padding">
+                        <div class=" align-items-center   ">
+                            <div class="text-cnt ">
                                 <svg class="svg-inline--fa fa-location-dot me-1"
                                     style="color: #FD003A;
                   font-size: 20px;" aria-hidden="true"
@@ -24,11 +24,19 @@
                             </div>
                         </div>
                         <div class="text-cnt">
-                            <div class="d-flex align-items-center text-cnt cnt-padding-ppp">
-                                <i class=" svg-inline--fa fa fa-volume-control-phone "></i>
-                                <div class="">
-                                    <p class="m-0 "><a>+01708465383</a>
-                                </div>
+                            <div class=" text-cnt ">
+                                <span><i class=" svg-inline--fa fa fa-volume-control-phone "></i></span>
+                                <span class="">
+                                +01708465383
+                                </span>
+
+
+                            </div>
+                            <div class=" text-cnt ">
+                                <span><i class=" svg-inline--fa fa fa-whatsapp "></i></span>
+                                <span class="">
+                                +01708465383
+                                </span>
 
 
                             </div>
@@ -95,26 +103,20 @@
             <div class="col-lg-4 col-md-4 col-sm-4   mt-3 mt-lg-0 ">
                 <div class="text-cnt">
                     <h4 class="dark-blue-color fw-bold">Working <span class="primary-color">Hours</span></h4>
-                    <div class="mt-lg-5   mt-3 mb-3 d-flex align-items-center cnt-padding ">
+                    <div class="mt-lg-5   mt-3 mb-3  ">
                         <svg class="svg-inline--fa fa-clock " aria-hidden="true" focusable="false" data-prefix="far"
                             data-icon="clock" role="img" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512" data-fa-i2svg="">
                             <path fill="currentColor"
                                 d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z">
                             </path>
-                        </svg><!-- <i class="fa-regular fa-clock me-3"></i> Font Awesome fontawesome.com -->
-                        <p class="m-0 ">9 AM - 10 PM , Mon - Sat</p>
+                        </svg>
+                        <span class="m-0 ">9 AM - 10 PM , Mon - Sat</span>
                     </div>
 
                     <a href=" {{ route('contact') }}"
-                        class="btn btn-primary submit_subscription mb-3  text-white ">Get
-                        Consultation</a>
-
-                </div>
-
+                        class="btn btn-primary submit_subscription mb-3  text-white ">Get Consultation</a></div>
             </div>
-
-
         </div>
     </div>
 </section>

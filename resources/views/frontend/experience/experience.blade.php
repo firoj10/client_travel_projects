@@ -101,14 +101,14 @@
                             href="{{ route('experiencedetails', ['name' => $experience->title, 'id' => $experience->id]) }}">
                             <div class=" exp-card text-center position-relative my-2"
                                 style="background-image: url('{{ $experience->thumbnail_image_link }}');">
-                                <div class="container position-relative">
-                                    <div class="position-absolute centered-content" style="top: 70%; left: 24px; transform: translateY(-50%);">
-                                        <div class="text-content">
-                                            <h2 class="experience-title">{{ $experience->title }}</h2>
-                                            <p class="experience-content">{{ $experience->sub_title }}</p>
-                                        </div>
-                                    </div>
+                                <div
+                                style="position: absolute; top: 70%;  width: 100%; display: flex; justify-content: center;">
+                                <div>
+                                    <h2 class="" style=" color: white">{{ $experience->title }}</h2>
+                                    {{-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quidem, eaque fugit quaerat doloremque eveniet cupiditate voluptates recusandae odit earum!</p> --}}
+                                    <p class="" style=" color: white">{{ $experience->sub_title }}</p>
                                 </div>
+                            </div>
 
                             </div>
                         </a>
@@ -138,7 +138,8 @@
             <div class="row">
                 <div class="col-md-6 ">
                     <div class="d-flex align-items-center">
-                        <svg class="svg-inline--fa fa-envelope-open me-3 white-color" aria-hidden="true"
+                        <svg class=" fa-envelope-open me-3 white-color" aria-hidden="true" width="60px" height="50px"
+
                             focusable="false" data-prefix="far" data-icon="envelope-open" role="img"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
                             <path fill="currentColor"
@@ -146,7 +147,7 @@
                             </path>
                         </svg><!-- <i class="fa-regular fa-envelope-open me-3 white-color"></i> Font Awesome fontawesome.com -->
                         <div class="pt-3 white-color">
-                            <h5 class="fw-bold">Join our <span class="primary-color">Newsletter</span></h5>
+                            <h5 class="fw-bold">Join our <span class="">Newsletter</span></h5>
                             <p class="fw-lighter">Subscribe &amp; Get Updates in Your Inbox</p>
                         </div>
                     </div>

@@ -123,7 +123,8 @@
             <div class="row">
                 <div class="col-md-6 ">
                     <div class="d-flex align-items-center">
-                        <svg class="svg-inline--fa fa-envelope-open me-3 white-color" aria-hidden="true"
+                        <svg class=" fa-envelope-open me-3 white-color" aria-hidden="true" width="60px" height="50px"
+
                             focusable="false" data-prefix="far" data-icon="envelope-open" role="img"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
                             <path fill="currentColor"
@@ -131,7 +132,7 @@
                             </path>
                         </svg>
                         <div class="pt-3 white-color">
-                            <h5 class="fw-bold">Join our <span class="primary-color">Newsletter</span></h5>
+                            <h5 class="fw-bold">Join our <span class="">Newsletter</span></h5>
                             <p class="fw-lighter">Subscribe &amp; Get Updates in Your Inbox</p>
                         </div>
                     </div>
