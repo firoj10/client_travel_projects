@@ -673,9 +673,10 @@ label {
 
     .navbar .navbar-brand img {
         padding-top: 0px !important;
-        width: 45px;
+        width: 35px;
         position: static;
         top: 35px;
+        left: 20px;
     }
 
     .navbar {
@@ -792,9 +793,11 @@ label {
 
     .navbar .navbar-brand img {
         padding-top: 0px;
-        width: 60px;
+        width: 50px;
         position: static;
+        left: 30px;
         top: 35px;
+        padding-left: 6px;
     }
 
     .navbar {

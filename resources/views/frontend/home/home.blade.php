@@ -57,6 +57,7 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
+    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             var elements = document.querySelectorAll('.rrr');
