@@ -49,6 +49,13 @@
                                         @endif
                                     </div>
                                     <div class="mb-3 col-md-6">
+                                        <label for="discount" class="form-label">Discount</label>
+                                        <input type="number" class="form-control" name="discount" >
+                                              @if ($errors->has('discount'))
+                                            <span class="text-danger">{{ $errors->first('discount') }}</span>
+                                        @endif
+                                    </div>
+                                    <div class="mb-3 col-md-6">
                                         <label for="address" class="form-label">Address</label>
                                         <input type="text" class="form-control" name="address">
                                           @if ($errors->has('address'))

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <title>Experience</title>
@@ -89,7 +88,7 @@
     @include('frontend.layouts.header')
     <!-- navbar ................... end.-->
 
-    <section class="about-banner" style="background-image: url('{{asset('frontend/img/about/about1.png')}}')">
+    <section class="about-banner" style="background-image: url('{{ asset('frontend/img/about/about1.png') }}')">
 
         <div class="container-fluid">
             <div class="about-content text-center">
@@ -99,23 +98,7 @@
         </div>
     </section>
 
-    <section class="p-2">
-        <div class="row">
-            <div class=" col-12 col-md-6">
-                @php
-                    $descriptions = json_decode($experiencesdetails->short_description);
-                @endphp
-                @foreach ($descriptions as $description)
-                    <p>{{ $description }}<br></p>
-                @endforeach
-
-            </div>
-            <div class=" col-12 col-md-6">
-                <img src="{{ asset($experiencesdetails->thumbnail_image_link) }}" alt="resort" class="img-fluid">
-
-            </div>
-        </div>
-    </section>
+ 
     <!--.............................................Newsletter-->
     <section class="joint_news px-5 py-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
@@ -124,7 +107,6 @@
                 <div class="col-md-6 ">
                     <div class="d-flex align-items-center">
                         <svg class=" fa-envelope-open me-3 white-color" aria-hidden="true" width="60px" height="50px"
-
                             focusable="false" data-prefix="far" data-icon="envelope-open" role="img"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
                             <path fill="currentColor"

@@ -40,6 +40,7 @@ class PackageController extends Controller
             'number_of_nights' => 'required|integer|min:1',
             'name' => ['required'],
             'star_rating' => ['required'],
+            'discount' => ['required'],
             'address' => ['required'],
             'city' => ['required'],
             'state' => ['required'],
@@ -75,6 +76,7 @@ class PackageController extends Controller
         $stay->gallery_images_link = json_encode($galleryImages);
         $stay->name = $request->name;
         $stay->star_rating = $request->star_rating;
+        $stay->discount = $request->discount;
         $stay->address = $request->address;
         $stay->city = $request->city;
         $stay->state = $request->state;
@@ -113,6 +115,8 @@ class PackageController extends Controller
         $request->validate([
             'name' => ['required'],
             'star_rating' => ['required'],
+            'discount' => ['required'],
+            
             'address' => ['required'],
             'city' => ['required'],
             'state' => ['required'],
@@ -175,6 +179,7 @@ class PackageController extends Controller
         $stay->price = $request->price;
         $stay->name = $request->name;
         $stay->star_rating = $request->star_rating;
+        $stay->discount = $request->discount;
         $stay->address = $request->address;
         $stay->city = $request->city;
         $stay->state = $request->state;

@@ -95,10 +95,17 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="text-center">
-                                        <div class="rating-star py-2">
-                                            <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
-                                            class="img-fluid">
-                                        </div>
+                                        <?php  if($package->star_rating < 5){ ?>
+                                            <div class="rating-star py-2">
+                                                <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
+                                                class="img-fluid">
+                                            </div>
+                                           <?php }else{?>
+                                            <div class="rating-star py-2">
+                                                <img src="{{ asset('frontend/img/5-star.png') }}" alt="star"
+                                                class="img-fluid">
+                                            </div>
+                                         <?php  }   ?>
                                         <h5 class="black-color fw-bold my-1">{{ $package->name }}</h5>
                                         <svg style="color: black" class="svg-inline--fa fa-location-dot "
                                             aria-hidden="true" focusable="false" data-prefix="fas"
@@ -122,10 +129,10 @@
                                                     {{ $description }}<br></p>
                                             @endforeach
                                         </ul>
-                                        <div class="text-center"><a href=""
+                                        {{-- <div class="text-center"><a href=""
                                             class="btn btn-primary anchor_click_function" data-url=""
                                             data-pagename="package-details">More Details</a>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     
                                 </div>

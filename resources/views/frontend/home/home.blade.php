@@ -69,77 +69,83 @@
             });
         });
     </script>
-    <!--.............................................Tailor-Made Holidays Packages -->
-    <section class="tailor-made py-5 overflow-hidden">
-        <div class="container-fluid wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
-            style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-            <div class="tailor-heading text-center">
-                <h2 class="black-color fw-bold">
-                    Tailor-Made Holidays <span class="primary-color">Packages</span> </h2>
-                <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
-            </div>
-            <div class="row  my-5 packages_home">
-                @foreach ($packages as $package)
-                    <div class="col-lg-6 col-md-6 col-xl-3 hove_transition position-relative mt-3">
-                        <div class="package-card">
-                            <div class="card-header overflow-hidden">
-                                <img src="{{ asset($package->thumbnail_image_link) }}" alt="resort" class="img-fluid">
+   
+   <section class="resort py-5 overflow-hidden">
+    <div class="container-fluid wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
+        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+        <div class="resort-heading text-center">
+            <h2 class="black-color fw-bold">
+                Tailor-Made Holidays <span class="primary-color">Packages </span>
+            </h2>
+            <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
+        </div>
+        <div class="row  my-4">
 
+            @foreach ($packages as $package)
+                <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3">
+                    <div class="position-relatives">
+                        <a href="{{ route('packagesdetails', ['name' => $package->name, 'id' => $package->id]) }}"
+                            class="anchor_click_function" data-pagename="resort-details">
+                            <div class="card-header overflow-hidden ">
+                                <img src="{{ asset($package->thumbnail_image_link) }}" alt="resort"
+                                    class="img-fluid">
                             </div>
                             <div class="card-body">
-                                <a href="{{ route('packagesdetails', ['name' => $package->name, 'id' => $package->id]) }}"
-                                    class="anchor_click_function" data-pagename="package-details">
-                                    <div class="text-center">
-                                        <div class="rating-star  py-2">
-                                            <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
-                                                class="img-fluid">
-                                        </div>
-
-                                        <h5 class="black-color fw-bold my-1">{{ $package->name }}</h5>
-
-                                        <svg class="svg-inline--fa fa-location-dot " style="color: #E50027;"
-                                            aria-hidden="true" focusable="false" data-prefix="fas" data-icon="location-dot"
-                                            role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                            data-fa-i2svg="">
-                                            <path fill="currentColor"
-                                                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                            </path>
-                                        </svg><!-- <i class="fa-solid fa-location-dot " style="color:#E50027;"></i> Font Awesome fontawesome.com -->
-                                        <span style="color: black">{{ $package->address }}</span>
+                                <div class="text-center">
+                                   
+                                   <?php  if($package->star_rating < 5){ ?>
+                                    <div class="rating-star py-2">
+                                        <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
+                                        class="img-fluid">
                                     </div>
-                                    <div class="card-list  py-2 text-black">
-                                        <ul class="bullets_list_package">
-                                            @php
-                                                $descriptions = json_decode($package->short_description);
-                                            @endphp
-                                            @foreach ($descriptions as $description)
-                                                <li></li>
-                                                <p class="mb-0" style="color: black"><i
-                                                        class="fa fa-check-square-o px-2"></i>
-                                                    {{ $description }}<br></p>
-                                            @endforeach
-
-                                        </ul>
-
+                                   <?php }else{?>
+                                    <div class="rating-star py-2">
+                                        <img src="{{ asset('frontend/img/5-star.png') }}" alt="star"
+                                        class="img-fluid">
                                     </div>
-
-                                </a>
-                                <div class="text-center py-3">
-
-                                    <a href="{{route('packages')}}" class="btn btn-primary anchor_click_function"
-                                       
-                                        data-pagename="package-details">More Details</a>
+                                 <?php  }   ?>
+                                    <h5 class="black-color fw-bold my-1">{{ $package->name }}</h5>
+                                    <svg style="color: black" class="svg-inline--fa fa-location-dot "
+                                        aria-hidden="true" focusable="false" data-prefix="fas"
+                                        data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 384 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                            d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
+                                        </path>
+                                    </svg>
+                                    <span style="color: black">{{ $package->address }}</span>
                                 </div>
+                                <div class="card-list  py-2">
+                                    <ul class="bullets_list_resort">
+                                        @php
+                                            $descriptions = json_decode($package->short_description);
+                                        @endphp
+                                        @foreach ($descriptions as $description)
+                                            <li></li>
+                                            <p class="mb-0" style="color: black"><i
+                                                    class="fa fa-check-square-o px-2"></i>
+                                                {{ $description }}<br></p>
+                                        @endforeach
+                                    </ul>
+                                    {{-- <div class="text-center"><a href=""
+                                        class="btn btn-primary anchor_click_function" data-url=""
+                                        data-pagename="package-details">More Details</a>
+                                    </div> --}}
+                                </div>
+                                
                             </div>
-
+                        </a>
+                        <div class="package-details ">
+                            <span class="white-color me-2">04 Nights Package</span>
 
                         </div>
-
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
+            
         </div>
-    </section>
+    </div>
+</section>
     <!--.............................................guest house Holidays Packages -->
 
     <section class="tailor-made py-5 overflow-hidden">
@@ -161,10 +167,17 @@
                             </div>
                             <div class="card-body">
                                 <div class="text-center">
-                                    <div class="rating-star py-2">
-                                        <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
+                                    <?php  if($stay->star_rating < 5){ ?>
+                                        <div class="rating-star py-2">
+                                            <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
                                             class="img-fluid">
-                                    </div>
+                                        </div>
+                                       <?php }else{?>
+                                        <div class="rating-star py-2">
+                                            <img src="{{ asset('frontend/img/5-star.png') }}" alt="star"
+                                            class="img-fluid">
+                                        </div>
+                                     <?php  }   ?>
                                     <h5 class="black-color fw-bold my-1">{{ $stay->name }}</h5>
                                     <svg class="svg-inline--fa fa-location-dot " aria-hidden="true" focusable="false"
                                         data-prefix="fas" data-icon="location-dot" role="img"
@@ -305,7 +318,7 @@
     <section class="booking-stp py-5 overflow-hidden">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 pt-5 d-flex flex-column align-items-center justify-content-center wow fadeInLeft"
+                <div class="col-lg-4 pt-2 d-flex flex-column align-items-center justify-content-center wow fadeInLeft"
                     data-wow-duration="2s"
                     data-wow-delay="0.1s"style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
                     <img src="{{ asset('frontend/img/step/home_booking_photo.png') }}" alt="vector"
@@ -313,11 +326,11 @@
                 </div>
                 <div class="col-lg-8 wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInRight;">
-                    <div class="booking-heading text-center">
+                    <div class="booking-heading text-center pt-3">
                         <h2 class="black-color fw-bold">Steps Of <span class="primary-color">Booking</span></h2>
                         <img src="{{ asset('frontend/img/step/Vector-sub.png') }}" alt="vector" class="img-fluid">
                     </div>
-                    <div class="row pt-5 justify-content-between">
+                    <div class="row pt-3 justify-content-between">
                         <div class="col-12 col-sm-6 col-md-6 col-lg-6 d-flex ">
                             <div class="me-3">
                                 <!-- <i class="fa-solid fa-map-location-dot"></i> -->
@@ -427,7 +440,7 @@
                                         <img class="d-block w-100  mb-3"
                                             src="{{ asset('frontend/img/license/certificates-9.png') }}" alt="">
                                     </div>
-                                    <div class="col-6 col-lg-2 align-self-center">
+                                    {{-- <div class="col-6 col-lg-2 align-self-center">
                                         <img class="d-block w-100  mb-3"
                                             src="{{ asset('frontend/img/license/certificates-14.png') }}" alt="">
                                     </div>
@@ -438,7 +451,7 @@
                                     <div class="col-6 col-lg-2 align-self-center">
                                         <img class="d-block w-100  mb-3"
                                             src="{{ asset('frontend/img/license/certificates-12.png') }}" alt="">
-                                    </div>
+                                    </div> --}}
                                     <div class="col-6 col-lg-2 align-self-center">
                                         <img class="d-block w-100  mb-3"
                                             src="{{ asset('frontend/img/license/certificates-11.png') }}" alt="">
@@ -497,7 +510,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#panelsStayOpen-collapseOne1" aria-expanded="true"
                                     aria-controls="panelsStayOpen-collapseOne1">
-                                    Tailor-made packages </button>
+                                    Demo packages </button>
                             </h2>
                             <div id="panelsStayOpen-collapseOne1" class="accordion-collapse collapse ">
                                 <div class="accordion-body">

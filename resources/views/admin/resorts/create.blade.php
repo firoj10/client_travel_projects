@@ -160,7 +160,7 @@
                                     <div class="mb-3 col-md-6">
                                         <label for="stay_type" class="form-label">Stay Type</label>
                                         <select class="form-select" name="stay_type">
-                                            <option value="hotel">Hotel</option>
+                                            {{-- <option value="hotel">Hotel</option> --}}
                                             <option value="resort">Resort</option>
                                             <option value="guest_house">Guest House</option>
                                         </select>

@@ -91,10 +91,17 @@
                 </div>
                 <div class="card-body">
                   <div class="text-center">
-                    <div class="rating-star py-2">
-                      <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
-                      class="img-fluid">
-                    </div>
+                    <?php  if($resort->star_rating < 5){ ?>
+                      <div class="rating-star py-2">
+                          <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
+                          class="img-fluid">
+                      </div>
+                     <?php }else{?>
+                      <div class="rating-star py-2">
+                          <img src="{{ asset('frontend/img/5-star.png') }}" alt="star"
+                          class="img-fluid">
+                      </div>
+                   <?php  }   ?>
                     <h5 class="black-color fw-bold my-1">{{$resort->name}}</h5>
                     <svg class="svg-inline--fa fa-location-dot " aria-hidden="true" focusable="false" data-prefix="fas"
                       data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"

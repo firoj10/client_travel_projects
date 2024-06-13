@@ -44,6 +44,11 @@
                                             name="star_rating" min="1" max="5">
                                     </div>
                                     <div class="mb-3 col-md-6">
+                                        <label for="discount" class="form-label">Discount</label>
+                                        <input type="number" class="form-control" value="{{ $package->discount }}"
+                                            name="discount" >
+                                    </div>
+                                    <div class="mb-3 col-md-6">
                                         <label for="address" class="form-label">Address</label>
                                         <input type="text" class="form-control" value="{{ $package->address }}"
                                             name="address">

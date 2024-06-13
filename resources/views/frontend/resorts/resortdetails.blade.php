@@ -96,7 +96,7 @@
     <div class="container-fluid mt-5">
         <div class="row">
             <div class="col-md-8">
-                <div class="social-icons icons_links ms-4">
+                {{-- <div class="social-icons icons_links ms-4">
                     <a href="" target="_blank" aria-label="Facebook"><img
                             src="{{asset('frontend/img/topicon/fb.png')}}" alt="fb"
                             class="img-fluid"></a>
@@ -114,7 +114,7 @@
                             alt="fb" class="img-fluid"></a>
     
     
-                </div>
+                </div> --}}
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
                     class="swiper mySwiper2">
                     <div class="swiper-wrapper">
@@ -561,10 +561,17 @@
                         </div>
                         <div class="card-body">
                             <div class="text-center">
-                                <div class="rating-star py-2">
-                                    <img src="{{ asset('frontend/img/resorts/4-star.png') }}" alt="star"
+                                <?php  if($mainresort->star_rating < 5){ ?>
+                                    <div class="rating-star py-2">
+                                        <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
                                         class="img-fluid">
-                                </div>
+                                    </div>
+                                   <?php }else{?>
+                                    <div class="rating-star py-2">
+                                        <img src="{{ asset('frontend/img/5-star.png') }}" alt="star"
+                                        class="img-fluid">
+                                    </div>
+                                 <?php  }   ?>
                                 <h5 class="black-color fw-bold my-1">{{$mainresort->name}}</h5>
                                 <svg class="svg-inline--fa fa-location-dot " aria-hidden="true" focusable="false"
                                     data-prefix="fas" data-icon="location-dot" role="img"

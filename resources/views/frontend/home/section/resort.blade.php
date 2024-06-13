@@ -16,10 +16,17 @@
                 </div>
                 <div class="card-body">
                     <div class="text-center">
-                        <div class="rating-star py-2">
-                            <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
+                        <?php  if($stay->star_rating < 5){ ?>
+                            <div class="rating-star py-2">
+                                <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
                                 class="img-fluid">
-                        </div>
+                            </div>
+                           <?php }else{?>
+                            <div class="rating-star py-2">
+                                <img src="{{ asset('frontend/img/5-star.png') }}" alt="star"
+                                class="img-fluid">
+                            </div>
+                         <?php  }   ?>
                         <h5 class="black-color fw-bold my-1">{{$stay->name}}</h5>
                         <svg class="svg-inline--fa fa-location-dot " aria-hidden="true" focusable="false"
                             data-prefix="fas" data-icon="location-dot" role="img"
@@ -45,7 +52,9 @@
             </a>
         </div>
            @endforeach
-            
+           <div class="text-center my-4">
+           <a href="{{route('resorts')}}" class="btn btn-primary  anchor_click_function" data-url="" data-pagename="resorts">View More Resorts</a>
+       </div>
        {{-- </div>
          <div class="row  my-4">
             <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3  ">

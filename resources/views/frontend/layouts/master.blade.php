@@ -14,6 +14,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('frontend/css/animate.min.css') }}">
     <style>
+         .position-relatives {
+            position: relative;
+        }
+
+        .package-details {
+            background-color: var(--primary-color) !important;
+            padding: 2px 5px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+        }
         html,
         body {
             position: relative;
@@ -133,7 +146,7 @@
                                     class="primary-color">"Tropical
                                     Paradise"</span></h1>
                             <p class="black-color mb-4"></p>
-                            <a href="{{ route('experience') }}" class="btn btn-secondary  px-5">Explore</a>
+                            {{-- <a href="{{ route('experience') }}" class="btn btn-secondary  px-5">Explore</a> --}}
                         </div>
                     </div>
                     <div class="col-12 col-md-8 col-lg-7 col-xl-4  d-flex flex-column justify-content-center wow fadeInRight"

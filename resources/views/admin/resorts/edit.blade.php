@@ -124,8 +124,8 @@
                                     <div class="mb-3 col-md-6">
                                         <label for="stay_type" class="form-label">Stay Type</label>
                                         <select class="form-select" name="stay_type">
-                                            <option {{ $stay->stay_type == 'hotel' ? 'selected ' : '' }} value="hotel">
-                                                Hotel</option>
+                                            {{-- <option {{ $stay->stay_type == 'hotel' ? 'selected ' : '' }} value="hotel">
+                                                Hotel</option> --}}
                                             <option {{ $stay->stay_type == 'resort' ? 'selected ' : '' }} value="resort">
                                                 Resort</option>
                                             <option {{ $stay->stay_type == 'guest_house' ? 'selected ' : '' }}

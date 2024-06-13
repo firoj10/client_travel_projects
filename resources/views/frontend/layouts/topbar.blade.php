@@ -2,7 +2,7 @@
 <div class="nav-top">
     <div class="d-lg-flex d-md-flex d-sm-block justify-content-between text-cnt">
         <div class="d-lg-flex  d-md-flex d-sm-block align-items-center text-cnt">
-            <div class="fab_icons_div">
+            <div class="fab_icons_div px-2">
                 <svg class="svg-inline--fa fa-phone " aria-hidden="true" focusable="false" data-prefix="fas"
                     data-icon="phone" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                     data-fa-i2svg="">
@@ -13,7 +13,7 @@
 
                 <span> <a href="" class="text-white">+ 12345678</a></span>
             </div>
-            <div class="fab_icons_div">
+            <div class="fab_icons_div  px-2">
                 <svg class="svg-inline--fa fa-envelope " aria-hidden="true" focusable="false" data-prefix="far"
                     data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                     data-fa-i2svg="">
@@ -24,7 +24,7 @@
                 <span> <a href=""
                         class="text-white">demo@gmail.com</a></span>
             </div>
-            <div class="fab_icons_div">
+            <div class="fab_icons_div  px-2">
                 <svg class="svg-inline--fa fa-location-dot " aria-hidden="true" focusable="false"
                     data-prefix="fas" data-icon="location-dot" role="img" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 384 512" data-fa-i2svg="">

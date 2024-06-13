@@ -97,8 +97,7 @@
             <div class="row px-5">
                 @foreach ($experiences as $experience)
                     <div class=" col-12 col-md-4 col-lg-3 ">
-                        <a
-                            href="{{ route('experiencedetails', ['name' => $experience->title, 'id' => $experience->id]) }}">
+                        <a href="{{ route('experiencedetails', ['name' => $experience->title, 'id' => $experience->id]) }}">
                             <div class=" exp-card text-center position-relative my-2"
                                 style="background-image: url('{{ $experience->thumbnail_image_link }}');">
                                 <div
@@ -114,9 +113,6 @@
                         </a>
                     </div>
                 @endforeach
-
-
-
             </div>
         </div>
 

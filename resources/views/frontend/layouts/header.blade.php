@@ -17,6 +17,10 @@
                     data-pagename="resorts">Resorts</a>
                 </p>
             <p class="nav-item">
+                <a href="#" class="nav-link anchor_click_function" data-url=""
+                    data-pagename="resorts">Guest House</a>
+                </p>
+            <p class="nav-item">
                 <a href="{{route('packages')}}" class="nav-link anchor_click_function" data-url=""
                     data-pagename="packages">Packages</a>
                 </p>
