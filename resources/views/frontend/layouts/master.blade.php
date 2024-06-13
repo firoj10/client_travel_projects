@@ -154,7 +154,7 @@
                         style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInRight;">
                         <div class="header-form">
                             <div class="form-header text-center py-1">
-                                <h5 class="white-color text-uppercase fw-bold fs-6 py-1">Request a Quote</h5>
+                                <h5 class="white-color text-uppercase fw-bold fs-6 py-1 m-0">Request a Quote</h5>
                             </div>
                             @include('frontend.home.section.bookingform')
                         </div>

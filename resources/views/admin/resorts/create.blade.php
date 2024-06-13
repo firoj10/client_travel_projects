@@ -55,7 +55,7 @@
                                             <span class="text-danger">{{ $errors->first('address') }}</span>
                                         @endif
                                     </div>
-                                    <div class="mb-3 col-md-6">
+                                    {{-- <div class="mb-3 col-md-6">
                                         <label for="city" class="form-label">City</label>
                                         <input type="text" class="form-control" name="city">
                                           @if ($errors->has('city'))
@@ -68,7 +68,7 @@
                                           @if ($errors->has('state'))
                                             <span class="text-danger">{{ $errors->first('state') }}</span>
                                         @endif
-                                    </div>
+                                    </div> --}}
                                     <div class="mb-3 col-md-6">
                                         <label for="country" class="form-label">Country</label>
                                         <input type="text" class="form-control" name="country">

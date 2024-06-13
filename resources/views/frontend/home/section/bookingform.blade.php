@@ -14,7 +14,6 @@
                     class="img-fluid">
                 <input type="number" placeholder="No of Nights" min="1"
                     max="100" name="no_off_nights" aria-invalid="true">
-
             </div>
         </div>
         <div class="row justify-content-between my-4">
@@ -23,7 +22,6 @@
                     class="img-fluid">
                 <input type="number" placeholder="No of Adults" min="1"
                     max="100" name="no_off_adults">
-
             </div>
             <div class="col-6 input d-flex align-items-center">
                 <img src="{{ asset('frontend/img/form/children.png') }}" alt="Children"
@@ -40,7 +38,7 @@
                 <select class="form-select" aria-label="Interested In*"
                     name="interested_in">
                     <option value="">Interested In*</option>
-                    <option value="Local island Hotel">Local island Hotel</option>
+                    <option value="Local island Hotel">Guest House</option>
                     <option value="4 star resort">4 star resort</option>
                     <option value="5 star resort">5 star resort</option>
                     <option value="5 star luxury resort">5 star luxury resort</option>

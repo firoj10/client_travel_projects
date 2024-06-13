@@ -150,7 +150,7 @@
     </section>
 
     <!--.............................................Newsletter-->
-    <section class="joint_news px-5 py-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
+    <section class="joint_news  py-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
         <div class="container-fluid">
             <div class="row">
@@ -170,8 +170,7 @@
                         </div>
                     </div>
                 </div>
-                <div
-                    class="col-md-6 mt-3 mt-lg-0 d-flex align-items-center justify-content-start justify-content-lg-end">
+                <div class="col-md-6 mt-3 mt-lg-0 d-flex align-items-center justify-content-start justify-content-lg-end">
 
                     <div class="input d-flex align-items-center justify-content-between rounded-pill p-1">
 
@@ -182,7 +181,8 @@
                         <input type="hidden" class="csrf_test_name2" name="csrf_test_name"
                             value="070ec39d1c63513063041b4de4fda8f1">
                         <div>
-                            <button type="button" class="btn btn-primary submit_subscription">Subscribe Now</button>
+                            <button type="button" class="btn btn-primary submit_subscription">Subscribe
+                                Now</button>
                         </div>
                     </div>
                 </div>

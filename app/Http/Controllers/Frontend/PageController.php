@@ -47,6 +47,21 @@ class PageController extends Controller
       )
   );
   }
+     public function guesthouse(){
+      $guesthouse = Stay::where('stay_type', 'guest_hours')->get();
+        return view('frontend.guesthouse.guesthouse', compact('guesthouse'));
+     }
+
+     public function guesthousedetails($id){
+      $guesthouse = Stay::where('stay_type', 'guest_hours')->get();
+      $guesthousedetails = Stay::findOrFail($id);
+      return view('frontend.guesthouse.guesthousedetails',
+      compact(
+          'guesthousedetails',
+          'guesthouse'
+      )
+  );
+  }
 
      public function about(){
         return view('frontend.about.about');

@@ -37,8 +37,7 @@ class StayController extends Controller
             'name' => ['required'],
             'star_rating' => ['required'],
             'address' => ['required'],
-            'city' => ['required'],
-            'state' => ['required'],
+           
             'country' => ['required'],
             'short_description' => ['required','array'],
             'short_description.*' => ['required','string','max:255'],
@@ -115,8 +114,7 @@ class StayController extends Controller
             'name' => ['required'],
             'star_rating' => ['required'],
             'address' => ['required'],
-            'city' => ['required'],
-            'state' => ['required'],
+           
             'country' => ['required'],
             'short_description' => ['required'],
             'overview_description' => ['required'],

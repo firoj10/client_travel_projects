@@ -163,7 +163,7 @@
                 </div>
                 <div class="header-form px-0">
                     <div class="form-header text-center py-1">
-                        <h5 class="white-color text-uppercase fw-bold fs-6 py-1">Request a Quote</h5>
+                        <h5 class="white-color text-uppercase fw-bold fs-6 py-1 m-0">Request a Quote</h5>
                     </div>
                     @include('frontend.home.section.bookingform')
 
@@ -598,488 +598,52 @@
                 </div>
                 @endforeach
                
-                {{-- <div class="col-md-6 col-lg-4 col-xl-3 mt-4 position-relative hove_transition">
-                    <a href="javascript:void(0)" class="anchor_click_function"
-                        data-url="https://holidayslinkmaldives.com/package/meeru-island-resort"
-                        data-pagename="package-details">
-                        <div class="card-header overflow-hidden">
-                            <img src="https://holidayslinkmaldives.com/public/uploads/resorts-23.jpg" alt="resort-img"
-                                class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="card-body"><a href="javascript:void(0)" class="anchor_click_function"
-                            data-url="https://holidayslinkmaldives.com/package/meeru-island-resort"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Meeru Island Resort</h5>
-                                <svg class="svg-inline--fa fa-location-dot me-1" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="location-dot" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot me-1"></i> Font Awesome fontawesome.com -->
-                                <span class="text-black">Kaafu Atoll </span>
-                            </div>
-                            <div class="card-list ps-3 py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p><i class="fa fa-check-square-o px-2"></i>
-                                        <span> Jacuzzi Water Villa <br>
-                                        </span>
-                                    </p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> Buffet Breakfast, Lunch &amp;
-                                            Dinner
-                                            &nbsp;<br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> Return Seaplane Transfer
-                                            (Airport –
-                                            Resort – Airport)<br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> All Applicable Taxes <br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> </span><span
-                                            style="font-size: 11pt; line-height: 107%; font-family: Calibri, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Meet
-                                            and assist on arrival and departure</span></p>
-
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)" class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/meeru-island-resort"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/meeru-island-resort"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-                    <div class="package-detail position-absolute ps-3">
-                        <span class="white-color me-2">04 Nights Package</span>
-
-                    </div>
-
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 position-relative hove_transition">
-                    <a href="javascript:void(0)" class="anchor_click_function"
-                        data-url="https://holidayslinkmaldives.com/package/sun-siyam-iru-veli"
-                        data-pagename="package-details">
-                        <div class="card-header overflow-hidden">
-                            <img src="https://holidayslinkmaldives.com/public/uploads/resorts-20.jpg" alt="resort-img"
-                                class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="card-body"><a href="javascript:void(0)" class="anchor_click_function"
-                            data-url="https://holidayslinkmaldives.com/package/sun-siyam-iru-veli"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Sun Siyam Iru Veli</h5>
-                                <svg class="svg-inline--fa fa-location-dot me-1" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="location-dot" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot me-1"></i> Font Awesome fontawesome.com -->
-                                <span class="text-black">Dhaalu Atoll</span>
-                            </div>
-                            <div class="card-list ps-3 py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p><i class="fa fa-check-square-o px-2"></i>
-                                        <span> Jacuzzi Water Villa <br>
-                                        </span>
-                                    </p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> Buffet Breakfast, Lunch &amp;
-                                            Dinner
-                                            &nbsp;<br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> Return Seaplane Transfer
-                                            (Airport –
-                                            Resort – Airport)<br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> All Applicable Taxes <br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> </span><span
-                                            style="font-size: 11pt; line-height: 107%; font-family: Calibri, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Meet
-                                            and assist on arrival and departure</span></p>
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)" class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/sun-siyam-iru-veli"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/sun-siyam-iru-veli"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-                    <div class="package-detail position-absolute ps-3">
-                        <span class="white-color me-2">04 Nights Package</span>
-
-                    </div>
-
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 position-relative hove_transition">
-                    <a href="javascript:void(0)" class="anchor_click_function"
-                        data-url="https://holidayslinkmaldives.com/package/diamonds-athuruga-maldives"
-                        data-pagename="package-details">
-                        <div class="card-header overflow-hidden">
-                            <img src="https://holidayslinkmaldives.com/public/uploads/resorts-19.jpg" alt="resort-img"
-                                class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="card-body"><a href="javascript:void(0)" class="anchor_click_function"
-                            data-url="https://holidayslinkmaldives.com/package/diamonds-athuruga-maldives"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Diamonds Athuruga Maldives</h5>
-                                <svg class="svg-inline--fa fa-location-dot me-1" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="location-dot" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot me-1"></i> Font Awesome fontawesome.com -->
-                                <span class="text-black">South Ari Atoll</span>
-                            </div>
-                            <div class="card-list ps-3 py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p><i class="fa fa-check-square-o px-2"></i>
-                                        <span> Jacuzzi Water Villa <br>
-                                        </span>
-                                    </p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> Buffet Breakfast, Lunch &amp;
-                                            Dinner
-                                            &nbsp;<br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> Return Seaplane Transfer
-                                            (Airport –
-                                            Resort – Airport)<br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> All Applicable Taxes <br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> </span><span
-                                            style="font-size: 11pt; line-height: 107%; font-family: Calibri, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Meet
-                                            and assist on arrival and departure</span></p>
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)" class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/diamonds-athuruga-maldives"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/diamonds-athuruga-maldives"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-                    <div class="package-detail position-absolute ps-3">
-                        <span class="white-color me-2">04 Nights Package</span>
-
-                    </div>
-
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 position-relative hove_transition">
-                    <a href="javascript:void(0)" class="anchor_click_function"
-                        data-url="https://holidayslinkmaldives.com/package/sandies-bathala-maldives"
-                        data-pagename="package-details">
-                        <div class="card-header overflow-hidden">
-                            <img src="https://holidayslinkmaldives.com/public/uploads/resorts-17.webp"
-                                alt="resort-img" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="card-body"><a href="javascript:void(0)" class="anchor_click_function"
-                            data-url="https://holidayslinkmaldives.com/package/sandies-bathala-maldives"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Sandies Bathala Maldives</h5>
-                                <svg class="svg-inline--fa fa-location-dot me-1" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="location-dot" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot me-1"></i> Font Awesome fontawesome.com -->
-                                <span class="text-black">North Ari Atoll </span>
-                            </div>
-                            <div class="card-list ps-3 py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p><i class="fa fa-check-square-o px-2"></i>
-                                        <span> Jacuzzi Water Villa <br>
-                                        </span>
-                                    </p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> Buffet Breakfast, Lunch &amp;
-                                            Dinner
-                                            &nbsp;<br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> Return Seaplane Transfer
-                                            (Airport –
-                                            Resort – Airport)<br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> All Applicable Taxes <br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> </span><span
-                                            style="font-size: 11pt; line-height: 107%; font-family: Calibri, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Meet
-                                            and assist on arrival and departure</span></p>
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)" class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/sandies-bathala-maldives"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/sandies-bathala-maldives"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-                    <div class="package-detail position-absolute ps-3">
-                        <span class="white-color me-2">04 Nights Package</span>
-
-                    </div>
-
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 position-relative hove_transition">
-                    <a href="javascript:void(0)" class="anchor_click_function"
-                        data-url="https://holidayslinkmaldives.com/package/sun-siyam-olhuveli"
-                        data-pagename="package-details">
-                        <div class="card-header overflow-hidden">
-                            <img src="https://holidayslinkmaldives.com/public/uploads/resorts-16.jpg" alt="resort-img"
-                                class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="card-body"><a href="javascript:void(0)" class="anchor_click_function"
-                            data-url="https://holidayslinkmaldives.com/package/sun-siyam-olhuveli"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Sun Siyam Olhuveli</h5>
-                                <svg class="svg-inline--fa fa-location-dot me-1" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="location-dot" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot me-1"></i> Font Awesome fontawesome.com -->
-                                <span class="text-black">South Male Atoll</span>
-                            </div>
-                            <div class="card-list ps-3 py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p><i class="fa fa-check-square-o px-2"></i>
-                                        <span> Jacuzzi Water Villa <br>
-                                        </span>
-                                    </p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> Buffet Breakfast, Lunch &amp;
-                                            Dinner
-                                            &nbsp;<br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> Return Seaplane Transfer
-                                            (Airport –
-                                            Resort – Airport)<br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> All Applicable Taxes <br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> </span><span
-                                            style="font-size: 11pt; line-height: 107%; font-family: Calibri, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Meet
-                                            and assist on arrival and departure</span></p>
-
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)" class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/sun-siyam-olhuveli"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/sun-siyam-olhuveli"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-                    <div class="package-detail position-absolute ps-3">
-                        <span class="white-color me-2">04 Nights Package</span>
-
-                    </div>
-
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 mt-4 position-relative hove_transition">
-                    <a href="javascript:void(0)" class="anchor_click_function"
-                        data-url="https://holidayslinkmaldives.com/package/siyam-world-maldives"
-                        data-pagename="package-details">
-                        <div class="card-header overflow-hidden">
-                            <img src="https://holidayslinkmaldives.com/public/uploads/resorts-15.webp"
-                                alt="resort-img" class="img-fluid">
-                        </div>
-                    </a>
-                    <div class="card-body"><a href="javascript:void(0)" class="anchor_click_function"
-                            data-url="https://holidayslinkmaldives.com/package/siyam-world-maldives"
-                            data-pagename="package-details">
-                            <div class="text-center">
-                                <div class="rating-star">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                    <img src="https://holidayslinkmaldives.com/assets/img/star.webp" alt="star"
-                                        class="img-fluid">
-                                </div>
-                                <h5 class="black-color fw-bold my-1">Siyam World Maldives</h5>
-                                <svg class="svg-inline--fa fa-location-dot me-1" aria-hidden="true" focusable="false"
-                                    data-prefix="fas" data-icon="location-dot" role="img"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                        d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
-                                    </path>
-                                </svg><!-- <i class="fa-solid fa-location-dot me-1"></i> Font Awesome fontawesome.com -->
-                                <span class="text-black">Dhigurah, Noonu Atoll</span>
-                            </div>
-                            <div class="card-list ps-3 py-2 text-black">
-                                <ul class="bullets_list_package">
-                                    <p><i class="fa fa-check-square-o px-2"></i>
-                                        <span> Jacuzzi Water Villa <br>
-                                        </span>
-                                    </p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> Buffet Breakfast, Lunch &amp;
-                                            Dinner
-                                            &nbsp;<br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> Return Seaplane Transfer
-                                            (Airport –
-                                            Resort – Airport)<br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> All Applicable Taxes <br>
-                                        </span></p>
-                                    <p><i class="fa fa-check-square-o px-2"></i><span> </span><span
-                                            style="font-size: 11pt; line-height: 107%; font-family: Calibri, sans-serif; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">Meet
-                                            and assist on arrival and departure</span></p>
-
-                                </ul>
-                            </div>
-                        </a>
-                        <div class="text-center py-3"><a href="javascript:void(0)" class="anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/siyam-world-maldives"
-                                data-pagename="package-details">
-
-                            </a><a href="javascript:void(0)" class="btn btn-primary anchor_click_function"
-                                data-url="https://holidayslinkmaldives.com/package/siyam-world-maldives"
-                                data-pagename="package-details">More Details</a>
-                        </div>
-                    </div>
-                    <div class="package-detail position-absolute ps-3">
-                        <span class="white-color me-2">4 Nights Package</span>
-
-                    </div>
-
-                </div> --}}
+            
             </div>
-            <!--<div class="text-center">
-                <a href="#" class="btn btn-primary">View More Packages</a>
-            </div>-->
+          
         </div>
     </section>
     <!--.............................................Newsletter-->
 
-    <section class="joint_news px-5 py-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
-        style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 ">
-                    <div class="d-flex align-items-center">
-                        <svg class=" fa-envelope-open me-3 white-color" aria-hidden="true" width="60px" height="50px"
+    <section class="joint_news  py-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
+    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="d-flex align-items-center">
+                    <svg class=" fa-envelope-open me-3 white-color" aria-hidden="true" width="60px" height="50px"
 
-                            focusable="false" data-prefix="far" data-icon="envelope-open" role="img"
-                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
-                            <path fill="currentColor"
-                                d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z">
-                            </path>
-                        </svg>
-                        <div class="pt-3 white-color">
-                            <h5 class="fw-bold">Join our <span class="">Newsletter</span></h5>
-                            <p class="fw-lighter">Subscribe &amp; Get Updates in Your Inbox</p>
-                        </div>
+                        focusable="false" data-prefix="far" data-icon="envelope-open" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg="">
+                        <path fill="currentColor"
+                            d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z">
+                        </path>
+                    </svg><!-- <i class="fa-regular fa-envelope-open me-3 white-color"></i> Font Awesome fontawesome.com -->
+                    <div class="pt-3 white-color">
+                        <h5 class="fw-bold">Join our <span class="">Newsletter</span></h5>
+                        <p class="fw-lighter">Subscribe &amp; Get Updates in Your Inbox</p>
                     </div>
                 </div>
-                <div
-                    class="col-md-6 mt-3 mt-lg-0 d-flex align-items-center justify-content-start justify-content-lg-end">
+            </div>
+            <div class="col-md-6 mt-3 mt-lg-0 d-flex align-items-center justify-content-start justify-content-lg-end">
 
-                    <div class="input d-flex align-items-center justify-content-between rounded-pill p-1">
+                <div class="input d-flex align-items-center justify-content-between rounded-pill p-1">
 
-                        <input type="hidden" class="csrf_test_name" name="csrf_test_name"
-                            value="070ec39d1c63513063041b4de4fda8f1">
-                        <input type="email" name="email" placeholder="Enter your email Address"
-                            class="subscribe_email">
-                        <input type="hidden" class="csrf_test_name2" name="csrf_test_name"
-                            value="070ec39d1c63513063041b4de4fda8f1">
-                        <div>
-                            <button type="button" class="btn btn-primary submit_subscription">Subscribe Now</button>
-                        </div>
+                    <input type="hidden" class="csrf_test_name" name="csrf_test_name"
+                        value="070ec39d1c63513063041b4de4fda8f1">
+                    <input type="email" name="email" placeholder="Enter your email Address"
+                        class="subscribe_email">
+                    <input type="hidden" class="csrf_test_name2" name="csrf_test_name"
+                        value="070ec39d1c63513063041b4de4fda8f1">
+                    <div>
+                        <button type="button" class="btn btn-primary submit_subscription">Subscribe
+                            Now</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     @include('frontend.layouts.footer')
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

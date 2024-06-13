@@ -42,8 +42,7 @@ class PackageController extends Controller
             'star_rating' => ['required'],
             'discount' => ['required'],
             'address' => ['required'],
-            'city' => ['required'],
-            'state' => ['required'],
+           
             'country' => ['required'],
             'short_description' => ['required', 'array'],
             'short_description.*' => ['required', 'string', 'max:255'],
@@ -118,8 +117,7 @@ class PackageController extends Controller
             'discount' => ['required'],
             
             'address' => ['required'],
-            'city' => ['required'],
-            'state' => ['required'],
+           
             'country' => ['required'],
             'short_description' => ['required'],
             'price' => 'required|numeric|min:0',

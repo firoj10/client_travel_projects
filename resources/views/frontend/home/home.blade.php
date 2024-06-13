@@ -3,6 +3,10 @@
     <section class="pricing overflow-hidden  pricing_section">
         <div class="container-fluid">
             <div class="row align-items-center justify-content-center home_photos_section">
+                <div class="col wow fadeIn text-center new-fadeIn" data-wow-duration="2s" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+                   
+                </div>
                 <div class="col wow fadeIn text-center" data-wow-duration="2s" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
                     <img src="{{ asset('frontend/img/logos/photo-2.png') }}" alt="" class="img-fluid first_image">
@@ -10,6 +14,9 @@
                 <div class="col wow fadeIn text-center" data-wow-duration="2s" data-wow-delay="0.1s"
                     style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
                     <img src="{{ asset('frontend/img/logos/photo-3.png') }}" alt="" class="img-fluid ">
+                </div>
+                <div class="col wow fadeIn text-center new-fadeIn" data-wow-duration="2s" data-wow-delay="0.1s"
+                    style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
                 </div>
                
             </div>
@@ -75,7 +82,7 @@
         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
         <div class="resort-heading text-center">
             <h2 class="black-color fw-bold">
-                Tailor-Made Holidays <span class="primary-color">Packages </span>
+                <span class="primary-color">Packages </span>
             </h2>
             <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
         </div>
@@ -148,19 +155,19 @@
 </section>
     <!--.............................................guest house Holidays Packages -->
 
-    <section class="tailor-made py-5 overflow-hidden">
+    {{-- <section class="tailor-made py-5 overflow-hidden">
         <div class="container-fluid wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
             style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
             <div class="tailor-heading text-center">
                 <h2 class="black-color fw-bold">
-                    Tailor-Made Holidays <span class="primary-color">Guest House</span> </h2>
+                     <span class="primary-color">Guest House</span> </h2>
                 <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
             </div>
             <div class="row  my-5 packages_home">
 
                 @foreach ($guest_house as $stay)
                     <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3  ">
-                        <a href="{{ route('resortdetails', $stay->id) }}" class="anchor_click_function"
+                        <a href="{{ route('guesthousedetails', $stay->id) }}" class="anchor_click_function"
                             data-pagename="resort-details">
                             <div class="card-header overflow-hidden ">
                                 <img src="{{ $stay->thumbnail_image_link }}" alt="resort" class="img-fluid">
@@ -205,7 +212,7 @@
             </div>
 
         </div>
-    </section>
+    </section> --}}
 
     <!--.............................................Our Trusted Partners -->
 

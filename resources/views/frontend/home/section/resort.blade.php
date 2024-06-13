@@ -3,7 +3,7 @@
         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
         <div class="resort-heading text-center">
             <h2 class="black-color fw-bold">
-                Have a Glance on <span class="primary-color">Resorts</span>
+                <span class="primary-color">Resorts</span>
             </h2>
             <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
         </div>

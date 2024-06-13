@@ -8,6 +8,7 @@ body {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 
 }
+
 ::placeholder {
     color: var(--black-color);
     opacity: 1; 
@@ -375,6 +376,9 @@ select {
         background: #fff;
         width: 100%;
     }
+    .new-fadeIn{
+        display: none;
+    }
 
     .joint_news .input input {
         outline: none;
@@ -631,6 +635,11 @@ label {
      
         align-items: center !important;
     }
+    .text-white {
+        --bs-text-opacity: 1;
+        color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+        font-size: 12px;
+    }
     .cnt-padding{
         padding-left: 40px;
     }
@@ -777,7 +786,7 @@ label {
     .text-white {
         --bs-text-opacity: 1;
         color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .social-icons a {

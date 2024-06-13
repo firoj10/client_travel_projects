@@ -49,6 +49,13 @@ Route::get('/packages', [PageController::class, 'packages'])->name('packages');
 Route::get('/packagesdetails/{id}', [PageController::class, 'packagesdetails'])->name('packagesdetails');
 Route::get('/experience', [PageController::class, 'experience'])->name('experience');
 Route::get('/experiencedetails/{id}', [PageController::class, 'experiencedetails'])->name('experiencedetails');
+
+
+
+Route::get('/guesthouse', [PageController::class, 'guesthouse'])->name('guesthouse');
+Route::get('/guesthousedetails/{id}', [PageController::class, 'guesthousedetails'])->name('guesthousedetails');
+
+
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 

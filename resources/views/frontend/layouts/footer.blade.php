@@ -27,7 +27,7 @@
                        
                         <div class="text-cnt">
                             <div class=" text-cnt ">
-                                <span><i class=" svg-inline--fa fa fa-volume-control-phone "></i></span>
+                                <span><img width="14px" src="{{asset('frontend/img/phone.jpeg')}}" alt=""></span>
                                 <span class="">
                                     + 12345678
                                 </span>

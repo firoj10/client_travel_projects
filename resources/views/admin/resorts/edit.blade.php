@@ -50,7 +50,7 @@
                                         <input type="text" class="form-control" value="{{ $stay->address }}"
                                             name="address">
                                     </div>
-                                    <div class="mb-3 col-md-6">
+                                    {{-- <div class="mb-3 col-md-6">
                                         <label for="city" class="form-label">City</label>
                                         <input type="text" class="form-control" value="{{ $stay->city }}"
                                             name="city">
@@ -59,7 +59,7 @@
                                         <label for="state" class="form-label">State</label>
                                         <input type="text" class="form-control" value="{{ $stay->state }}"
                                             name="state">
-                                    </div>
+                                    </div> --}}
                                     <div class="mb-3 col-md-6">
                                         <label for="country" class="form-label">Country</label>
                                         <input type="text" class="form-control" value="{{ $stay->country }}"
