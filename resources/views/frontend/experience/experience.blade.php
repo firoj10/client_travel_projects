@@ -72,7 +72,7 @@
     <section class="about-banner" style="background-image: url('{{ asset('frontend/img/banner_experience.png') }}')">
         <div class="container-fluid">
             <div class="about-content text-center">
-                <h1 class="white-color fw-bold fs-1">Experience <span class="primary-color">Resorts</span>
+                <h1 class="white-color fw-bold fs-1">Experience <span class="primary-color"></span>
                 </h1>
                 <p><span class="fw-semibold  white-color">Find the best & the reliable resorts to get an unforgettable
                         holiday experience in the tropical paradise of the Maldives.</span>

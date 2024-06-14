@@ -547,9 +547,8 @@
     <section class="tailor-made py-5">
         <div class="container-fluid">
             <div class="tailor-heading text-center">
-                <h2 class="black-color fw-bold">Tailor-Made Holidays <span class="primary-color">Packages</span></h2>
-                <img src="https://holidayslinkmaldives.com/assets/img/subtitle-vector.webp" alt="vector"
-                    class="img-fluid">
+                <h2 class="black-color fw-bold"> <span class="primary-color">Resorts</span></h2>
+               
             </div>
             <div class="row px-3 my-5 packages_home">
                

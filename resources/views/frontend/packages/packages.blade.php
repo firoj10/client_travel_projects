@@ -63,7 +63,7 @@
     <section class="about-banner" style="background-image: url('{{ asset('frontend/img/banner_packages.png') }}')">
         <div class="container-fluid">
             <div class="about-content text-center">
-                <h1 class="white-color fw-bold fs-1">Maldives Holiday <span class="primary-color">Packages</span>
+                <h1 class="white-color fw-bold fs-1"> <span class="primary-color">Packages</span>
                     <span class="primary-color">
                     </span>
                 </h1>
@@ -78,7 +78,7 @@
             style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
             <div class="resort-heading text-center">
                 <h2 class="black-color fw-bold">
-                    Tailor-Made Holidays <span class="primary-color">Packages </span>
+                     <span class="primary-color">Packages </span>
                 </h2>
                 <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
             </div>

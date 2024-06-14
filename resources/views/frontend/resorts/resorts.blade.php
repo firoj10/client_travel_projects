@@ -63,7 +63,7 @@
     style="background-image: url('{{asset("frontend/img/banner_resort.jpeg")}}')">
         <div class="container-fluid">
             <div class="about-content text-center">
-                <h1 class="white-color fw-bold fs-1">Maldives  <span class="primary-color">Resorts</span>
+                <h1 class="white-color fw-bold fs-1"><span class="primary-color">Resorts</span>
                     {{-- <span class="primary-color">US</span> --}}
                 </h1>
             </div>
@@ -77,7 +77,7 @@
           style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
           <div class="resort-heading text-center">
             <h2 class="black-color fw-bold">
-              Have a Glance on <span class="primary-color">Resorts</span>
+             <span class="primary-color">Resorts</span>
             </h2>
             <img src="{{asset('frontend/img/resorts/subtitle-vector.png')}}" alt="vector" class="img-fluid">
           </div>
