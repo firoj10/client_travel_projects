@@ -14,6 +14,13 @@
         .position-relatives {
             position: relative;
         }
+        .discount{
+            font-size: 30px;
+           font-weight: 800;
+        }
+        .pricing-header{
+            background-color: var(--primary-color) !important;
+        }
 
         .package-details {
             background-color: var(--primary-color) !important;
@@ -143,7 +150,7 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <h2 class="black-color island_resort">{{ $packagesdetails->name }}</h2>
+                <h2 class="black-color island_resort">{{ $packagesdetails->name}}</h2>
                 <div class="rating-star">
                     <img src="{{ asset('frontend/img/4-star.png') }}" alt="star" class="img-fluid">
                 </div>
@@ -155,13 +162,97 @@
                             d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
                         </path>
                     </svg>
-                    <span class="ms-2">{{ $packagesdetails->address }}</span>
+                    <span class="ms-2">{{ $packagesdetails->address}}</span>
                 </div>
                 <div class="header-form px-0">
                     <div class="form-header text-center py-1">
                         <h5 class="white-color text-uppercase fw-bold fs-6 py-1 m-0">Request a Quote</h5>
                     </div>
-                    @include('frontend.home.section.bookingform')
+                  {{-- start --}}
+                  <form class="submit_quote_form" action="{{ route('quotation.store') }}" method="POST" novalidate="novalidate">
+                    @csrf
+                    <div class="form-body py-3 px-4">
+                        <div class="row justify-content-between">
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/calendar.png') }}" alt="Calendar"
+                                    class="img-fluid">
+                                <input type="text" placeholder="Tentative Arrival Date"
+                                    class="date_picker" id="datepickers" name="date" aria-invalid="true">
+                
+                            </div>
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/sleeping.png') }}" alt="Sleeping"
+                                    class="img-fluid">
+                                <input type="number" placeholder="No of Nights" min="1"
+                                    max="100" name="no_off_nights" aria-invalid="true">
+                            </div>
+                        </div>
+                        <div class="row justify-content-between my-4">
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/couple.png') }}" alt="Couple"
+                                    class="img-fluid">
+                                <input type="number" placeholder="No of Adults" min="1"
+                                    max="100" name="no_off_adults">
+                            </div>
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/children.png') }}" alt="Children"
+                                    class="img-fluid">
+                                <input type="number" placeholder="No of Kids" min="0"
+                                    max="100" name="no_off_kids">
+                
+                            </div>
+                        </div>
+                        <div class="row justify-content-between my-4">
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/couple.png') }}" alt="Couple"
+                                    class="img-fluid">
+                                <select class="form-select" aria-label="Interested In*"
+                                    name="interested_in">
+                                    <option value="">Interested In*</option>
+                                    <option value="Local island Hotel">Guest House</option>
+                                    <option value="4 star resort">4 star resort</option>
+                                    <option value="5 star resort">5 star resort</option>
+                                    <option value="5 star luxury resort">5 star luxury resort</option>
+                                </select>
+                            </div>
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/user.png') }}" alt="User"
+                                    class="img-fluid">
+                                <input type="text" placeholder="Your Name*" name="name">
+                            </div>
+                        </div>
+                
+                        <div class="row justify-content-between my-4">
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/email.png') }}" alt="Email"
+                                    class="img-fluid">
+                                <input type="text" placeholder="Your Email*" name="email">
+                
+                            </div>
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/phone.png') }}" alt="Phone"
+                                    class="img-fluid">
+                                <input type="num" placeholder="Phone / Whatsapp*"
+                                    name="phone_number">
+                
+                            </div>
+                
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-area">
+                                <textarea width="100%" name="description" id="" cols="20" rows="1"
+                                    placeholder="Please advise your required villa category." aria-invalid="false"></textarea>
+                            </div>
+                        </div>
+                      
+                
+                        <div class="mt-3 text-center">
+                            <button type="submit" class="btn btn-primary px-5">Submit</button>
+                        </div>
+                    </div>
+                    
+                </form>
+                  {{-- end --}}
                 </div>
 
 
@@ -172,54 +263,64 @@
 
 
 
-    <section class="p-2 container-fluid">
+    <section class="py-2 container-fluid">
         <div class="row">
-            <div class="col-12 col-md-4">
+            <div class="col-12  col-md-7 col-lg-9">
                 <div class="" id="nav-tab" role="">
-                    <button class="btn btn-primary" id="nav-home-tab13" data-bs-toggle="tab"
+                    <button class="btn btn-primary my-3" id="nav-home-tab13" data-bs-toggle="tab"
                         data-bs-target="#nav-home13" type="button" role="tab" aria-controls="nav-home"
                         aria-selected="true">{{$packagesdetails->number_of_nights}} Nights Package</button>
 
                 </div>
-                @php
-                $descriptions = json_decode($packagesdetails->short_description);
-            @endphp
-            @foreach ($descriptions as $description)
-                <p>{{ $description }}<br></p>
-            @endforeach
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        @php
+                            $descriptions = json_decode($packagesdetails->short_description);
+                        @endphp
+                        @foreach ($descriptions as $description)
+                        
+                            <p class="mx-3 mb-0"> <i class="fa fa-check-square-o px-2"></i>{{ $description }}<br></p>
+                        @endforeach
+                    </div>
+                    <div class="col-12 col-md-5">
+                        @php
+                            $descriptions = json_decode($packagesdetails->short_description);
+                        @endphp
+                        @foreach ($descriptions as $description)
+                        <p class="mx-3 mb-0"> <i class="fa fa-check-square-o px-2"></i>{{ $description }}<br></p>
+                        @endforeach
+                    </div>
+                </div>
+            
 
             </div>
-            <div class="col-12 col-md-5">
-                @php
-                    $descriptions = json_decode($packagesdetails->short_description);
-                @endphp
-                @foreach ($descriptions as $description)
-                    <p>{{ $description }}<br></p>
-                @endforeach
-            </div>
-            <div class="col-12 col-md-3">
+            <div class="col-12  col-md-5 col-lg-3">
                 <div class="text-start">
                     <div class="package-pricing text-start">
                         <div class="pricing-header py-4 px-5 white-color ">
     
-                            <span><img src="{{asset('frontend/img/percent.png')}}" alt="" class="me-3"> UPTO <strong>{{$packagesdetails->discount}}</strong> OFF</span>
+                            <span><img src="{{asset('frontend/img/percent.png')}}" alt="" class="me-3"> UPTO <strong class="discount">{{ number_format($packagesdetails->discount, 0) }}%</strong> OFF</span>
                         </div>
     
                         <div class="pricing-body ">
-                            <h2 class="dark-blue-color fw-bold fs-1">${{$packagesdetails->price}}/ <span>Couple</span></h2>
+                            <h2 class="dark-blue-color fw-bold fs-1">${{ number_format($packagesdetails->price, 0) }}/ <span>Couple</span></h2>
                             <div class="my-2">
                                 <!-- <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> -->
-                                <span><i class="  fa fa-phone "></i></span>
-                                <span class="ms-2">+960-9506464</span>
+                                <span><img width="14px" src="{{asset('frontend/img/phone.jpeg')}}" alt=""></span>
+                                <span class="ms-2">+12345678</span>
                             </div>
                             <div>
-                                <span><i class="  fa fa-whatsapp "></i></span>
-                                <span class="ms-2">+960-9506464</span>
+                                <span><img src="{{ asset('frontend/img/topicon/whatsapp.png') }}"
+                                    style=" width: 20px !important; height:20px !important" alt="fb"
+                                    class="img-fluid"></span>
+                                <span class="ms-2">+12345678</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+           
+            
         </div>
     </section>
     <!--.............................................Have a Glance on Resorts -->
@@ -280,10 +381,7 @@
                                                     {{ $description }}<br></p>
                                             @endforeach
                                         </ul>
-                                        {{-- <div class="text-center"><a href=""
-                                                class="btn btn-primary anchor_click_function" data-url=""
-                                                data-pagename="package-details">More Details</a>
-                                        </div> --}}
+                                        
                                     </div>
 
                                 </div>
@@ -342,6 +440,15 @@
 </section>
     @include('frontend.layouts.footer')
     <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#datepickers").datepicker();
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">

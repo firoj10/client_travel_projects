@@ -146,7 +146,91 @@
                     <div class="form-header text-center py-1">
                         <h5 class="white-color text-uppercase fw-bold fs-6 py-1 m-0">Request a Quote</h5>
                     </div>
-                    @include('frontend.home.section.bookingform')
+                     {{-- start --}}
+                  <form class="submit_quote_form" action="{{ route('quotation.store') }}" method="POST" novalidate="novalidate">
+                    @csrf
+                    <div class="form-body py-3 px-4">
+                        <div class="row justify-content-between">
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/calendar.png') }}" alt="Calendar"
+                                    class="img-fluid">
+                                <input type="text" placeholder="Tentative Arrival Date"
+                                    class="date_picker" id="datepickers" name="date" aria-invalid="true">
+                
+                            </div>
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/sleeping.png') }}" alt="Sleeping"
+                                    class="img-fluid">
+                                <input type="number" placeholder="No of Nights" min="1"
+                                    max="100" name="no_off_nights" aria-invalid="true">
+                            </div>
+                        </div>
+                        <div class="row justify-content-between my-4">
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/couple.png') }}" alt="Couple"
+                                    class="img-fluid">
+                                <input type="number" placeholder="No of Adults" min="1"
+                                    max="100" name="no_off_adults">
+                            </div>
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/children.png') }}" alt="Children"
+                                    class="img-fluid">
+                                <input type="number" placeholder="No of Kids" min="0"
+                                    max="100" name="no_off_kids">
+                
+                            </div>
+                        </div>
+                        <div class="row justify-content-between my-4">
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/couple.png') }}" alt="Couple"
+                                    class="img-fluid">
+                                <select class="form-select" aria-label="Interested In*"
+                                    name="interested_in">
+                                    <option value="">Interested In*</option>
+                                    <option value="Local island Hotel">Guest House</option>
+                                    <option value="4 star resort">4 star resort</option>
+                                    <option value="5 star resort">5 star resort</option>
+                                    <option value="5 star luxury resort">5 star luxury resort</option>
+                                </select>
+                            </div>
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/user.png') }}" alt="User"
+                                    class="img-fluid">
+                                <input type="text" placeholder="Your Name*" name="name">
+                            </div>
+                        </div>
+                
+                        <div class="row justify-content-between my-4">
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/email.png') }}" alt="Email"
+                                    class="img-fluid">
+                                <input type="text" placeholder="Your Email*" name="email">
+                
+                            </div>
+                            <div class="col-6 input d-flex align-items-center">
+                                <img src="{{ asset('frontend/img/form/phone.png') }}" alt="Phone"
+                                    class="img-fluid">
+                                <input type="num" placeholder="Phone / Whatsapp*"
+                                    name="phone_number">
+                
+                            </div>
+                
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-area">
+                                <textarea width="100%" name="description" id="" cols="20" rows="1"
+                                    placeholder="Please advise your required villa category." aria-invalid="false"></textarea>
+                            </div>
+                        </div>
+                      
+                
+                        <div class="mt-3 text-center">
+                            <button type="submit" class="btn btn-primary px-5">Submit</button>
+                        </div>
+                    </div>
+                    
+                </form>
+                  {{-- end --}}
 
                 </div>
 
@@ -154,7 +238,6 @@
             </div>
         </div>
     </div>
-
     <section class="resort-tabs">
         <div class="container-fluid p-0 px-3 py-5">
             <div class="content">
@@ -198,44 +281,46 @@
                         <a href="javascript:void(0)" data-url=" "
                             class="btn btn-secondary anchor_click_function">Get in Touch</a>
                     </div>
-                    <div class="tab-pane fade py-3" id="spa-wellness" role="tabpanel"
-                        aria-labelledby="spa-wellness-tab">
+                    <div class="tab-pane fade py-3" id="spa-wellness" role="tabpanel" aria-labelledby="spa-wellness-tab">
                         <div class="title fw-bold">Spa &amp; Wellness</div>
-                        <p>{{ $guesthousedetails->spa_and_wellness_description }}</p> <a href="javascript:void(0)"
-                            data-url=" " class="btn btn-secondary anchor_click_function">Get in Touch</a>
+                        <p>{{ $guesthousedetails->spa_and_wellness_description }}</p> <a href="javascript:void(0)" data-url=" "
+                            class="btn btn-secondary anchor_click_function">Get in Touch</a>
                     </div>
                     <div class="tab-pane fade py-3" id="activities-facilities" role="tabpanel"
                         aria-labelledby="activities-facilities-tab">
                         <div class="title fw-bold">Activities &amp; Facilities</div>
-                        <p>{{ $guesthousedetails->activities_and_facilities_description }}</p> <a
-                            href="javascript:void(0)" data-url=" "
-                            class="btn btn-secondary anchor_click_function">Get in Touch</a>
+                        <p>{{ $guesthousedetails->activities_and_facilities_description }}</p> <a href="javascript:void(0)"
+                            data-url=" " class="btn btn-secondary anchor_click_function">Get in Touch</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
     <section class="tailor-made py-5">
         <div class="container-fluid">
             <div class="tailor-heading text-center">
-                <h2 class="black-color fw-bold">Tailor-Made Holidays <span class="primary-color">Packages</span></h2>
-                <section class="about-banner" style="background-image: url('{{asset('frontend/img/about/about2.png')}}')">
+                <h2 class="black-color fw-bold"> <span class="primary-color">Guest House</span></h2>
+                {{-- <section class="about-banner"
+                    style="background-image: url('{{ asset('frontend/img/about/about2.png') }}')"> --}}
 
             </div>
             <div class="row px-3 my-5 packages_home">
 
-                @foreach ($guesthousedetails as $mainresort)
+                @foreach ($guest_house as $guest_housed)
                     <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3  ">
-                        <a href="{{ route('guesthousedetails', ['id' => $mainresort->id]) }}" class="anchor_click_function"
-                            data-pagename="resort-details">
+
+
+                        <a href="{{ route('guesthousedetails', ['id' => $guest_housed->id]) }}"
+                            class="anchor_click_function" data-pagename="resort-details">
                             <div class="card-header overflow-hidden ">
-                                <img src="{{ asset($mainresort->thumbnail_image_link) }}" alt="resort"
+                                <img src="{{ asset($guest_housed->thumbnail_image_link) }}" alt="resort"
                                     class="img-fluid">
                             </div>
                             <div class="card-body">
                                 <div class="text-center">
-                                    <?php  if($mainresort->star_rating < 5){ ?>
+                                    <?php  if($guest_housed->star_rating < 5){ ?>
                                     <div class="rating-star py-2">
                                         <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
                                             class="img-fluid">
@@ -246,7 +331,7 @@
                                             class="img-fluid">
                                     </div>
                                     <?php  }   ?>
-                                    <h5 class="black-color fw-bold my-1">{{ $mainresort->name }}</h5>
+                                    <h5 class="black-color fw-bold my-1">{{ $guest_housed->name }}</h5>
                                     <svg class="svg-inline--fa fa-location-dot " aria-hidden="true" focusable="false"
                                         data-prefix="fas" data-icon="location-dot" role="img"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
@@ -254,17 +339,16 @@
                                             d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
                                         </path>
                                     </svg>
-                                    <span>{{ $mainresort->address }}</span>
+                                    <span>{{ $guest_housed->address }}</span>
                                 </div>
                                 <div class="card-list  py-2">
                                     <ul class="bullets_list_resort">
-                                        {{-- @php
-                                   $descriptions =  json_decode($mainresort->short_description); @endphp 
-                                       @foreach ($descriptions as $description)
-        
-                                       <p class="mb-0"><i class="fa fa-check-square-o px-2"></i>{{$description}} </p>
-        
-                                       @endforeach --}}
+                                        @php
+                                        $descriptions = json_decode($guest_housed->short_description); @endphp
+                                        @foreach ($descriptions as $description)
+                                            <p class="mb-0"><i
+                                                    class="fa fa-check-square-o px-2"></i>{{ $description }} </p>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -320,6 +404,15 @@
     </section>
     @include('frontend.layouts.footer')
     <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#datepickers").datepicker();
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">

@@ -477,7 +477,6 @@ li {
 
 .pricing-header {
     border-radius: 28px 28px 0px 0px;
-    opacity: 0.5;
     background: var(--primary-color);
     color: #FFF;
     text-align: center;

@@ -48,17 +48,17 @@ class PageController extends Controller
   );
   }
      public function guesthouse(){
-      $guesthouse = Stay::where('stay_type', 'guest_hours')->get();
-        return view('frontend.guesthouse.guesthouse', compact('guesthouse'));
+      $guest_house = Stay::where('stay_type', 'guest_house')->get();
+        return view('frontend.guesthouse.guesthouse', compact('guest_house'));
      }
 
      public function guesthousedetails($id){
-      $guesthouse = Stay::where('stay_type', 'guest_hours')->get();
+      $guest_house = Stay::where('stay_type', 'guest_house')->get();
       $guesthousedetails = Stay::findOrFail($id);
       return view('frontend.guesthouse.guesthousedetails',
       compact(
           'guesthousedetails',
-          'guesthouse'
+          'guest_house'
       )
   );
   }

@@ -58,11 +58,14 @@
                   
                 {{-- </a> --}}
                 @endforeach
-                
-            </div>
+             
             
             <div class="swiper-pagination"></div>
         </div>
+        <div class="text-center my-4">
+            <a href="{{route('experience')}}" class="btn btn-primary  anchor_click_function" data-url="" data-pagename="resorts">View More Experience</a>
+        </div>
+    </div>
     </section>
     
     <script>
@@ -149,13 +152,15 @@
                     </div>
                 </div>
             @endforeach
-            
+            <div class="text-center my-4">
+                <a href="{{route('packages')}}" class="btn btn-primary  anchor_click_function" data-url="" data-pagename="resorts">View More Packages</a>
+            </div>
         </div>
     </div>
 </section>
     <!--.............................................guest house Holidays Packages -->
 
-    {{-- <section class="tailor-made py-5 overflow-hidden">
+    <section class="tailor-made py-5 overflow-hidden">
         <div class="container-fluid wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
             style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
             <div class="tailor-heading text-center">
@@ -165,16 +170,16 @@
             </div>
             <div class="row  my-5 packages_home">
 
-                @foreach ($guest_house as $stay)
+                @foreach ($guest_house as $guest_housed)
                     <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3  ">
-                        <a href="{{ route('guesthousedetails', $stay->id) }}" class="anchor_click_function"
+                        <a href="{{ route('guesthousedetails', $guest_housed->id) }}" class="anchor_click_function"
                             data-pagename="resort-details">
                             <div class="card-header overflow-hidden ">
-                                <img src="{{ $stay->thumbnail_image_link }}" alt="resort" class="img-fluid">
+                                <img src="{{ $guest_housed->thumbnail_image_link }}" alt="resort" class="img-fluid">
                             </div>
                             <div class="card-body">
                                 <div class="text-center">
-                                    <?php  if($stay->star_rating < 5){ ?>
+                                    <?php  if($guest_housed->star_rating < 5){ ?>
                                         <div class="rating-star py-2">
                                             <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
                                             class="img-fluid">
@@ -185,7 +190,7 @@
                                             class="img-fluid">
                                         </div>
                                      <?php  }   ?>
-                                    <h5 class="black-color fw-bold my-1">{{ $stay->name }}</h5>
+                                    <h5 class="black-color fw-bold my-1">{{ $guest_housed->name }}</h5>
                                     <svg class="svg-inline--fa fa-location-dot " aria-hidden="true" focusable="false"
                                         data-prefix="fas" data-icon="location-dot" role="img"
                                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg="">
@@ -193,12 +198,12 @@
                                             d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z">
                                         </path>
                                     </svg>
-                                    <span>{{ $stay->address }}</span>
+                                    <span>{{ $guest_housed->address }}</span>
                                 </div>
                                 <div class="card-list  py-2">
                                     <ul class="bullets_list_resort">
                                         @php
-                                        $descriptions = json_decode($stay->short_description); @endphp
+                                        $descriptions = json_decode($guest_housed->short_description); @endphp
                                         @foreach ($descriptions as $description)
                                             <p class="mb-0"><i
                                                     class="fa fa-check-square-o px-2"></i>{{ $description }} </p>
@@ -209,10 +214,13 @@
                         </a>
                     </div>
                 @endforeach
+                 <div class="text-center my-4">
+            <a href="{{route('guesthouse')}}" class="btn btn-primary  anchor_click_function" data-url="" data-pagename="resorts">View More Guest House</a>
+        </div>
             </div>
 
         </div>
-    </section> --}}
+    </section> 
 
     <!--.............................................Our Trusted Partners -->
 
