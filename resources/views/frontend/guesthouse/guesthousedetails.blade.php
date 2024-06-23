@@ -302,12 +302,8 @@
         <div class="container-fluid">
             <div class="tailor-heading text-center">
                 <h2 class="black-color fw-bold"> <span class="primary-color">Guest House</span></h2>
-                {{-- <section class="about-banner"
-                    style="background-image: url('{{ asset('frontend/img/about/about2.png') }}')"> --}}
-
             </div>
             <div class="row px-3 my-5 packages_home">
-
                 @foreach ($guest_house as $guest_housed)
                     <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3  ">
 
@@ -355,10 +351,7 @@
                         </a>
                     </div>
                 @endforeach
-
-
             </div>
-
         </div>
     </section>
     <!--.............................................Newsletter-->

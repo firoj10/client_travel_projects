@@ -115,9 +115,7 @@ class PackageController extends Controller
             'name' => ['required'],
             'star_rating' => ['required'],
             'discount' => ['required'],
-            
             'address' => ['required'],
-           
             'country' => ['required'],
             'short_description' => ['required'],
             'price' => 'required|numeric|min:0',

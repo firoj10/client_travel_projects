@@ -152,7 +152,17 @@
             <div class="col-md-4">
                 <h2 class="black-color island_resort">{{ $packagesdetails->name}}</h2>
                 <div class="rating-star">
-                    <img src="{{ asset('frontend/img/4-star.png') }}" alt="star" class="img-fluid">
+                    <?php  if($packagesdetails->star_rating < 5){ ?>
+                        <div class="rating-star py-2">
+                            <img src="{{ asset('frontend/img/4-star.png') }}" alt="star"
+                            class="img-fluid">
+                        </div>
+                       <?php }else{?>
+                        <div class="rating-star py-2">
+                            <img src="{{ asset('frontend/img/5-star.png') }}" alt="star"
+                            class="img-fluid">
+                        </div>
+                     <?php  }   ?>
                 </div>
                 <div class="location mb-4">
                     <svg class="svg-inline--fa fa-location-dot" aria-hidden="true" style="color: #E50027;"

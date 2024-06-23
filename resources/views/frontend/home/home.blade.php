@@ -62,7 +62,7 @@
             
             <div class="swiper-pagination"></div>
         </div>
-        <div class="text-center my-4">
+        <div class="text-center my-3">
             <a href="{{route('experience')}}" class="btn btn-primary  anchor_click_function" data-url="" data-pagename="resorts">View More Experience</a>
         </div>
     </div>
@@ -80,7 +80,7 @@
         });
     </script>
    
-   <section class="resort py-5 overflow-hidden">
+   <section class="resort py-3 overflow-hidden">
     <div class="container-fluid wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
         <div class="resort-heading text-center">
@@ -160,7 +160,7 @@
 </section>
     <!--.............................................guest house Holidays Packages -->
 
-    <section class="tailor-made py-5 overflow-hidden">
+    <section class="tailor-made  overflow-hidden">
         <div class="container-fluid wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
             style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
             <div class="tailor-heading text-center">
@@ -168,7 +168,7 @@
                      <span class="primary-color">Guest House</span> </h2>
                 <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
             </div>
-            <div class="row  my-5 packages_home">
+            <div class="row  my-3 packages_home">
 
                 @foreach ($guest_house as $guest_housed)
                     <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3  ">

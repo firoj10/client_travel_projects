@@ -10,12 +10,10 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function resorts(){
+   public function resorts(){
       $resorts = Stay::where('stay_type', 'resort')->get();
         return view('frontend.resorts.resorts', compact('resorts'));
      }
-
- 
      public function packages(){
          $packages = Package::all();
         return view('frontend.packages.packages', compact('packages'));
@@ -31,12 +29,10 @@ class PageController extends Controller
       )
   );
   }
-
      public function experience(){
       $experiences = Experience::all();
         return view('frontend.experience.experience', compact('experiences'));
      }
-
      public function experiencedetails($id){
       $experiences = Experience::all();
       $experiencesdetails = Experience::findOrFail($id);
@@ -51,7 +47,6 @@ class PageController extends Controller
       $guest_house = Stay::where('stay_type', 'guest_house')->get();
         return view('frontend.guesthouse.guesthouse', compact('guest_house'));
      }
-
      public function guesthousedetails($id){
       $guest_house = Stay::where('stay_type', 'guest_house')->get();
       $guesthousedetails = Stay::findOrFail($id);
@@ -62,16 +57,12 @@ class PageController extends Controller
       )
   );
   }
-
      public function about(){
         return view('frontend.about.about');
      }
      public function contact(){
         return view('frontend.contact.contact');
      }
-
-
-     
      public function privacypage(){
         return view('frontend.privacypolicy.privacypolicy');
      }

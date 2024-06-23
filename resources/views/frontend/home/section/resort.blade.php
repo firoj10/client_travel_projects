@@ -1,4 +1,4 @@
-<section class="resort py-5 overflow-hidden">
+<section class="resort py-3 overflow-hidden">
     <div class="container-fluid wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.1s"
         style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
         <div class="resort-heading text-center">
@@ -7,7 +7,7 @@
             </h2>
             <img src="{{ asset('frontend/img/resorts/subtitle-vector.png') }}" alt="vector" class="img-fluid">
         </div>
-        <div class="row  my-4">
+        <div class="row  my-3">
            @foreach ($stays as $stay)
            <div class="col-lg-6 col-md-6 col-xl-3 hove_transition mt-3  ">
             <a href="{{route('resortdetails', $stay->id )}}" class="anchor_click_function" data-pagename="resort-details">
@@ -52,7 +52,7 @@
             </a>
         </div>
            @endforeach
-           <div class="text-center my-4">
+           <div class="text-center my-3">
            <a href="{{route('resorts')}}" class="btn btn-primary  anchor_click_function" data-url="" data-pagename="resorts">View More Resorts</a>
        </div>
        {{-- </div>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +17,6 @@
             width: 100%;
             height: 100%;
             overflow: hidden !important;
-
         }
 
         .swiper-slide {
@@ -27,9 +25,7 @@
             background: #fff;
             display: flex;
             justify-content: center;
-            align-items: center;
-            /* margin-right: 10px !important;
-      padding-right: 30px !important; */
+            align-items: center;   
         }
 
         .swiper-slide img {
@@ -51,13 +47,10 @@
 
 <body>
     <section>
-
         @include('frontend.layouts.topbar')
     </section>
     <section class="header_nav container-fluid px-0">
-
         @include('frontend.layouts.header')
-
     </section>
     <section class="about-banner" style="background-image: url('{{ asset('frontend/img/banner_resort.jpeg') }}')">
         <div class="container-fluid">
@@ -126,10 +119,6 @@
                     </div>
                 @endforeach
             </div>
-
-
-
-
         </div>
     </section>
     <!--.............................................Newsletter-->
