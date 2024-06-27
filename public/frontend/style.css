@@ -755,13 +755,11 @@ label {
         padding-left: 20px;
         padding-top: 10px;
     }
-
-    .header-form .form-body .input input {
+    .header-form .form-body .input input{
         width: 100%;
         margin-left: 2px;
         font-size: 12px;
     }
-
     .navbar-collapse {
         background-color: #3DC2EC !important;
         z-index: 999;

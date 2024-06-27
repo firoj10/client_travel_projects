@@ -283,7 +283,7 @@
 
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-5">
+                    <div class="col-12 col-md-5 py-2">
                         @php
                             $descriptions = json_decode($packagesdetails->short_description);
                         @endphp
@@ -292,7 +292,7 @@
                             <p class="mx-3 mb-0"> <i class="fa fa-check-square-o px-2"></i>{{ $description }}<br></p>
                         @endforeach
                     </div>
-                    <div class="col-12 col-md-5">
+                    <div class="col-12 col-md-5 py-2">
                         @php
                             $descriptions = json_decode($packagesdetails->short_description);
                         @endphp
